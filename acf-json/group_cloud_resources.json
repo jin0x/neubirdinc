@@ -1,0 +1,146 @@
+{
+    "key": "group_cloud_resources",
+    "title": "Block: Cloud Resources",
+    "fields": [
+        {
+            "key": "field_cloud_res_title",
+            "label": "Section Title",
+            "name": "section_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Main heading for the resources section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Resources for your AWS team",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cloud_res_description",
+            "label": "Description",
+            "name": "description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Short description that explains what these resources cover",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_cloud_res_items",
+            "label": "Resources",
+            "name": "resources",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add rows for each PDF or external resource",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "max": 20,
+            "layout": "table",
+            "button_label": "Add Resource",
+            "collapsed": "field_cloud_res_name",
+            "sub_fields": [
+                {
+                    "key": "field_cloud_res_name",
+                    "label": "Resource Name",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Display name for this PDF or asset",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "Incident response playbook for AWS",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_cloud_res_type",
+                    "label": "Type Label",
+                    "name": "type_label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Optional type or tag (e.g., PDF, One-pager, Case study)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "PDF",
+                    "maxlength": "",
+                    "placeholder": "PDF",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_cloud_res_url",
+                    "label": "URL",
+                    "name": "url",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "Link to the PDF or resource (Salesforce, S3, etc.)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "https://"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/cloud-resources"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Compact resources table with links to PDFs and collateral",
+    "show_in_rest": 0,
+    "modified": 1735689600
+}
+
+

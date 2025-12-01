@@ -1,0 +1,230 @@
+.contact-us {
+  position: relative;
+  background: #f7f8f8;
+  padding-top: 128px;
+  padding-bottom: 128px;
+
+  @media (max-width: 767.98px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .content-area {
+    h1 {
+      margin-bottom: 104px;
+
+      @media (max-width: 767.98px) {
+        margin-bottom: 32px;
+      }
+    }
+
+    .form-area {
+      margin-bottom: 128px;
+
+      @media (max-width: 767.98px) {
+        margin-bottom: 0;
+      }
+
+      .nav-tabs {
+        border-bottom: none;
+        padding-left: 56px;
+        padding-right: 56px;
+        background: #fff;
+        min-height: 64px;
+        column-gap: 40px;
+        width: fit-content;
+        align-items: flex-end;
+
+        @media (max-width: 767.98px) {
+          padding-left: 16px;
+          padding-right: 16px;
+          column-gap: 24px;
+          min-height: 40px;
+        }
+        .nav-item {
+          .nav-link {
+            color: #aeaeae;
+            font-family: "PP Neue Montreal";
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 166.667%;
+            border: none;
+            border-bottom: 8px solid rgba(255, 255, 255, 0);
+            padding: 0;
+            background: transparent !important;
+            text-align: left;
+            padding-bottom: 8px;
+
+            @media (max-width: 767.98px) {
+              font-size: 14px;
+              line-height: normal;
+              border-bottom-width: 6px;
+            }
+
+            &.active {
+              border-bottom-color: #f3755f;
+            }
+
+            @media (max-width: 767.98px) {
+              width: 100%;
+              margin-right: 0;
+            }
+          }
+        }
+      }
+      .tab-content {
+        padding: 56px;
+        background-color: #fff;
+
+        @media (max-width: 767.98px) {
+          padding: 16px;
+        }
+        .tab-pane {
+          .form-container {
+            form {
+              position: relative;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              column-gap: 16px;
+              row-gap: 24px;
+
+              @media (max-width: 767.98px) {
+                row-gap: 16px;
+              }
+
+              .input-box {
+                flex: 0 0 100%;
+                max-width: 100%;
+                position: relative;
+
+                &.half {
+                  flex: 0 0 calc((100% - 16px) / 2);
+                  max-width: calc((100% - 16px) / 2);
+
+                  @media (max-width: 767.98px) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                  }
+                }
+
+                label {
+                  color: #aeaeae;
+                  font-family: "PP Neue Montreal";
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 150%;
+                  letter-spacing: 1.2px;
+                  text-transform: uppercase;
+                  margin-bottom: 8px;
+
+                  @media (max-width: 767.98px) {
+                    margin-bottom: 6px;
+                  }
+
+                  span {
+                    color: #f3755f;
+                  }
+                }
+
+                input {
+                  width: 100%;
+                  background: #fff;
+                  padding: 12px 16px;
+                  color: #003a51;
+                  font-family: "PP Neue Montreal";
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 150%;
+                  border: 1px solid #d2d2d1;
+                  height: 48px;
+                }
+                textarea {
+                  width: 100%;
+                  height: 110px;
+                  background: #fff;
+                  padding: 12px 16px;
+                  color: #003a51;
+                  font-family: "PP Neue Montreal";
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 150%;
+                  border: 1px solid #d2d2d1;
+                  resize: none;
+                }
+              }
+              .form-submit {
+                .inactive {
+                  background-color: #aeaeae;
+                  pointer-events: none;
+                }
+              }
+              .form-info {
+                position: absolute;
+                bottom: 15px;
+                right: 0;
+
+                @media (max-width: 991.98px) {
+                  bottom: 4px;
+                }
+
+                p {
+                  color: #f3755f;
+                  text-align: right;
+                  font-family: "PP Neue Montreal";
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 150%;
+                  letter-spacing: 1.2px;
+                  text-transform: uppercase;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .our-office {
+      @media (max-width: 767.98px) {
+        display: none;
+      }
+      .eyebrow {
+        margin-bottom: 24px;
+      }
+      .column-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 56px;
+
+        .column-box {
+          flex: 0 0 calc((100% - 56px) / 2);
+          max-width: calc((100% - 56px) / 2);
+
+          h3 {
+            color: #003a51;
+            font-family: "PP Neue Montreal";
+            font-size: 27px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 129.63%;
+            margin-bottom: 16px;
+          }
+          p {
+            color: #003a51;
+            font-family: "PP Neue Montreal";
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 133.333%;
+          }
+        }
+      }
+    }
+  }
+}

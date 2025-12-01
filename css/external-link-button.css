@@ -1,0 +1,151 @@
+/* External Link Button Block Styles */
+.external-link-button-block {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    min-height: 120px;
+}
+
+/* Override any inherited spacing from other sections */
+.external-link-button-block {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.external-link-button-block .content-area {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.external-link-button-block .button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Primary Button Style (Default - Blue) */
+.external-link-button-block .btn {
+    display: inline-block;
+    font-family: "PP Neue Montreal", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 16px 32px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    text-align: center;
+    min-width: 175px;
+}
+
+.external-link-button-block .btn-primary {
+    background-color: #008c61;
+    color: #ffffff;
+    border: 2px solid #008c61;
+}
+
+.external-link-button-block .btn-primary:hover {
+    background-color: #006b4a;
+    border-color: #006b4a;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 140, 97, 0.3);
+}
+
+/* Secondary Button Style (White) */
+.external-link-button-block .btn-secondary {
+    background-color: #ffffff;
+    color: #003a51;
+    border: 2px solid #003a51;
+}
+
+.external-link-button-block .btn-secondary:hover {
+    background-color: #003a51;
+    color: #ffffff;
+    border-color: #003a51;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 58, 81, 0.3);
+}
+
+/* Outline Button Style */
+.external-link-button-block .btn-outline {
+    background-color: transparent;
+    color: #003a51;
+    border: 2px solid #003a51;
+}
+
+.external-link-button-block .btn-outline:hover {
+    background-color: #008c61;
+    color: #ffffff;
+    border-color: #008c61;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 140, 97, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 767.98px) {
+    .external-link-button-block {
+        padding: 24px 0;
+    }
+    
+    .external-link-button-block .content-area {
+        padding: 0 16px;
+    }
+    
+    .external-link-button-block .btn {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 14px 24px;
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .external-link-button-block .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* Focus states for accessibility */
+.external-link-button-block .btn:focus {
+    outline: 3px solid rgba(0, 140, 97, 0.5);
+    outline-offset: 2px;
+}
+
+.external-link-button-block .btn-secondary:focus {
+    outline: 3px solid rgba(0, 58, 81, 0.5);
+}
+
+.external-link-button-block .btn-outline:focus {
+    outline: 3px solid rgba(0, 58, 81, 0.5);
+}
+
+/* Animation for smooth transitions */
+.external-link-button-block .btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.external-link-button-block .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.external-link-button-block .btn:hover::before {
+    left: 100%;
+}

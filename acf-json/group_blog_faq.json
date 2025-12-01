@@ -1,0 +1,193 @@
+{
+    "key": "group_blog_faq",
+    "title": "Blog FAQ Settings",
+    "fields": [
+        {
+            "key": "field_blog_faq_header",
+            "label": "FAQ Header",
+            "name": "blog_faq_header",
+            "type": "text",
+            "instructions": "Enter the main heading for the FAQ section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Frequently Asked Questions",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_blog_faq_subheading",
+            "label": "FAQ Subheading",
+            "name": "blog_faq_subheading",
+            "type": "text",
+            "instructions": "Enter a subheading or description for the FAQ section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_blog_faq_display_style",
+            "label": "FAQ Display Style",
+            "name": "blog_faq_display_style",
+            "type": "select",
+            "instructions": "Choose how the FAQ items should be displayed by default",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "first_expanded": "First FAQ expanded, others collapsed (default)",
+                "accordion_closed": "All FAQs collapsed",
+                "accordion_open": "All FAQs expanded",
+                "always_open": "Always open (no accordion behavior)"
+            },
+            "default_value": "first_expanded",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_blog_faq_layout",
+            "label": "FAQ Layout",
+            "name": "blog_faq_layout",
+            "type": "select",
+            "instructions": "Choose the layout for displaying FAQ items",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "single_column": "Single Column",
+                "two_columns": "Two Columns"
+            },
+            "default_value": "single_column",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_blog_faq_items",
+            "label": "FAQ Items",
+            "name": "blog_faq_items",
+            "type": "repeater",
+            "instructions": "Add FAQ questions and answers",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add FAQ Item",
+            "sub_fields": [
+                {
+                    "key": "field_blog_faq_question",
+                    "label": "Question",
+                    "name": "question",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_blog_faq_answer",
+                    "label": "Answer",
+                    "name": "answer",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                }
+            ]
+        },
+        {
+            "key": "field_blog_faq_enable_schema",
+            "label": "Enable Schema Markup",
+            "name": "blog_faq_enable_schema",
+            "type": "true_false",
+            "instructions": "Enable JSON-LD schema markup for better SEO",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "blog"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1640995200
+}

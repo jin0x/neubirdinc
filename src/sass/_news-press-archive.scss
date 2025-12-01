@@ -1,0 +1,187 @@
+.news-press-archive {
+  position: relative;
+  background: #d9e7ec;
+  padding-top: 128px;
+  padding-bottom: 128px;
+
+  @media (max-width: 767.98px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .content-area {
+    h1 {
+      margin-bottom: 100px;
+
+      @media (max-width: 767.98px) {
+        margin-bottom: 32px;
+      }
+    }
+    .news-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 32px;
+      row-gap: 32px;
+
+      @media (max-width: 767.98px) {
+        row-gap: 16px;
+      }
+
+      .news-box {
+        position: relative;
+        flex: 0 0 calc((100% - 64px) / 3);
+        max-width: calc((100% - 64px) / 3);
+        background: #fff;
+        padding: 32px;
+
+        @media (max-width: 991.98px) {
+          flex: 0 0 calc((100% - 32px) / 2);
+          max-width: calc((100% - 32px) / 2);
+        }
+
+        @media (max-width: 767.98px) {
+          flex: 0 0 100%;
+          max-width: 100%;
+          padding: 24px;
+        }
+
+        .meta {
+          p {
+            color: #000;
+            font-family: "Iowan Old Style";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 8px;
+
+            @media (max-width: 767.98px) {
+              font-size: 14px;
+              margin-bottom: 4px;
+            }
+          }
+          h6 {
+            color: #003a51;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 0;
+
+            @media (max-width: 767.98px) {
+              font-size: 14px;
+            }
+          }
+        }
+        .image-box {
+          width: 100%;
+          height: 208px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          @media (max-width: 767.98px) {
+            height: 104px;
+          }
+
+          img {
+            max-width: 100%;
+            object-fit: contain;
+
+            @media (max-width: 767.98px) {
+              transform: scale(0.5);
+              transform-origin: left center;
+            }
+          }
+        }
+        .text-area {
+          h3 {
+            color: #003a51;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+            margin-bottom: 8px;
+
+            @media (max-width: 767.98px) {
+              font-size: 22px;
+              line-height: 115%;
+            }
+          }
+          p {
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 166.667%;
+            margin-bottom: 0;
+
+            @media (max-width: 767.98px) {
+              line-height: 145%;
+            }
+          }
+        }
+      }
+    }
+    .news-pagination {
+      margin-top: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 40px;
+
+      @media (max-width: 767.98px) {
+        margin-top: 32px;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        color: #003a51;
+        font-family: "PP Neue Montreal";
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 166.667%;
+
+        &.newer {
+          &::before {
+            content: "";
+            width: 15px;
+            height: 15px;
+            background-image: url(../../images/pagination-arrow-left.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-right: 8px;
+            display: inline-block;
+          }
+        }
+        &.older {
+          &::after {
+            content: "";
+            width: 15px;
+            height: 15px;
+            background-image: url(../../images/pagination-arrow-right.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-left: 8px;
+            display: inline-block;
+          }
+        }
+
+        &.disable {
+          color: #b4cad2;
+          pointer-events: none;
+
+          &::before,
+          &::after {
+            filter: brightness(0) saturate(100%) invert(83%) sepia(35%)
+              saturate(121%) hue-rotate(150deg) brightness(93%) contrast(84%);
+          }
+        }
+      }
+    }
+  }
+}

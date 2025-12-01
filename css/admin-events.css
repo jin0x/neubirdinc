@@ -1,0 +1,87 @@
+/* Custom styling for Events ACF fields in admin */
+.acf-field {
+    padding: 20px !important;
+}
+
+.acf-fields > .acf-field {
+    border-top: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+/* Fix for duplicate fields */
+.acf-field-group[data-name="event_details"] {
+    display: none;
+}
+
+/* Better spacing for Event Details metabox */
+#acf-group_events {
+    padding: 15px;
+}
+
+#acf-group_events .inside {
+    padding: 0;
+    margin: 0;
+}
+
+/* Improve field labels */
+.acf-field .acf-label label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #23282d;
+}
+
+/* Better input styling */
+.acf-field input[type="text"],
+.acf-field input[type="date"],
+.acf-field input[type="url"],
+.acf-field textarea {
+    padding: 10px !important;
+    border-radius: 4px !important;
+}
+
+/* Better button styling */
+.acf-field .button {
+    padding: 5px 15px !important;
+    height: auto !important;
+    line-height: 1.5 !important;
+}
+
+/* Improve image field */
+.acf-field-image .acf-image-uploader {
+    padding: 15px !important;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+/* Better date picker styling */
+.ui-datepicker {
+    padding: 10px !important;
+    border-radius: 4px !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+}
+
+.ui-datepicker .ui-datepicker-header {
+    border-radius: 4px 4px 0 0 !important;
+    background: #00a651 !important;
+    border: none !important;
+}
+
+.ui-datepicker .ui-datepicker-title {
+    color: white !important;
+}
+
+.ui-datepicker .ui-state-default {
+    border-radius: 50% !important;
+    text-align: center !important;
+}
+
+.ui-datepicker .ui-state-highlight {
+    background: #f0f9f4 !important;
+    border-color: #00a651 !important;
+}
+
+.ui-datepicker .ui-state-active {
+    background: #00a651 !important;
+    color: white !important;
+    border-color: #00a651 !important;
+}

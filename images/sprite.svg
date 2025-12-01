@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <!-- Error Messages Icon -->
+  <symbol id="error-messages" viewBox="0 0 24 24">
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+  </symbol>
+  
+  <!-- Lambda Functions Icon -->
+  <symbol id="lambda" viewBox="0 0 24 24">
+    <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2zm2-14h10v2H9.5l4.5 7H12l-4-7H6V8z"/>
+  </symbol>
+  
+  <!-- Active Alarms Icon -->
+  <symbol id="active-alarms" viewBox="0 0 24 24">
+    <path d="M22 5.72l-4.6-3.86-1.29 1.53 4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86 2 5.71l1.29 1.53 4.59-3.85zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9a9 9 0 0 0 0-18zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7zm1-11h-2v6h6v-2h-4V9z"/>
+  </symbol>
+  
+  <!-- RDS Icon -->
+  <symbol id="rds" viewBox="0 0 24 24">
+    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
+    <path d="M7 12h2v5H7zm8-5h2v10h-2zm-4 7h2v3h-2zm0-4h2v2h-2z"/>
+  </symbol>
+</svg> 

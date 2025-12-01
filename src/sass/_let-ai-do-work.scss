@@ -1,0 +1,146 @@
+.let-ai-do-work {
+  position: relative;
+  background: #d9e7ec;
+  padding-top: 96px;
+  padding-bottom: 160px;
+
+  @media (max-width: 991.98px) {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+
+  .content-area {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row-reverse;
+    column-gap: 56px;
+
+    @media (max-width: 991.98px) {
+      row-gap: 32px;
+    }
+
+    .text-area {
+      flex: 0 0 calc(100% - 535px);
+      max-width: calc(100% - 535px);
+
+      @media (max-width: 991.98px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .eyebrow {
+        margin-bottom: 24px;
+
+        @media (max-width: 767.98px) {
+          margin-bottom: 16px;
+        }
+      }
+      .h1 {
+        line-height: 106.667%;
+        letter-spacing: -2.25px;
+        margin-bottom: 24px;
+
+        @media (max-width: 767.98px) {
+          font-size: 28px;
+          line-height: 115%;
+          letter-spacing: 0;
+          margin-bottom: 8px;
+        }
+      }
+      p {
+        margin-bottom: 24px;
+
+        @media (max-width: 767.98px) {
+          br {
+            display: none;
+          }
+        }
+      }
+      .btn {
+        margin-top: 40px;
+
+        @media (max-width: 767.98px) {
+          margin-top: 8px;
+        }
+      }
+    }
+    .chat-area {
+      flex: 0 0 479px;
+      max-width: 479px;
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: 991.98px) {
+        flex: 0 0 500px;
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      @media (max-width: 767.98px) {
+        flex: 0 0 400px;
+        max-width: 100%;
+      }
+
+      p {
+        position: relative;
+        display: inline-block;
+        border-radius: 20px;
+        background: #fff;
+        color: #282828;
+        font-family: "Iowan Old Style";
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;
+        padding: 10px 16px;
+        margin-bottom: 24px;
+        max-width: 80%;
+        margin-right: auto;
+
+        @media (max-width: 767.98px) {
+          font-size: 16px;
+          margin-bottom: 8px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &::before {
+          content: "";
+          width: 0;
+          height: 0;
+          border-left: 24px solid transparent;
+          border-right: 24px solid transparent;
+          border-top: 27px solid #fff;
+          position: absolute;
+          left: 6px;
+          top: calc(100% - 15px);
+
+          @media (max-width: 767.98px) {
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 17px solid #fff;
+            position: absolute;
+            left: 12px;
+            top: calc(100% - 6px);
+          }
+        }
+
+        &.right {
+          margin-left: auto;
+          margin-right: 0;
+          &::before {
+            left: unset;
+            right: 6px;
+
+            @media (max-width: 767.98px) {
+              right: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

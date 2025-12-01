@@ -1,0 +1,137 @@
+{
+    "key": "group_blog_archive_settings",
+    "title": "Blog Archive Settings",
+    "fields": [
+        {
+            "key": "field_blog_archive_title",
+            "label": "Title",
+            "name": "title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Blog",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_main_featured_post",
+            "label": "Main Featured Post",
+            "name": "main_featured_post",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "Select the post that will be displayed as the main featured post (large image on the right).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "blog"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_manual_featured_posts",
+            "label": "Manually Select Featured Posts",
+            "name": "manual_featured_posts",
+            "type": "relationship",
+            "instructions": "Manually select posts to feature in the slider. If none selected, recent posts marked as featured will be used.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "blog"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": "",
+            "max": 10,
+            "return_format": "id"
+        },
+        {
+            "key": "field_featured_posts_count",
+            "label": "Featured Posts Count",
+            "name": "featured_posts_count",
+            "type": "number",
+            "instructions": "Enter the number of featured posts to display in the slider. Default is 5.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 5,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": 10,
+            "step": 1
+        },
+        {
+            "key": "field_regular_posts_count",
+            "label": "Regular Posts Count",
+            "name": "regular_posts_count",
+            "type": "number",
+            "instructions": "Enter the number of regular posts to display per page. Default is 9.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 9,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 3,
+            "max": 24,
+            "step": 3
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/blog-archive"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Settings for the blog archive block"
+}

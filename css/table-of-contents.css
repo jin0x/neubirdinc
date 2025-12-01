@@ -1,0 +1,167 @@
+/* Table of Contents Block Styles - Minimal Design */
+.table-of-contents-block {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 24px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    box-shadow: none;
+}
+
+/* Glossary Table of Contents Styles */
+.table-of-contents-wrapper {
+    margin: 30px 0 40px;
+    position: relative;
+}
+
+.table-of-contents-wrapper.sticky-toc {
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+}
+
+/* Sidebar TOC styling for Glossary pages - Minimal */
+.col-lg-4 .table-of-contents-wrapper {
+    margin: 0;
+    position: sticky;
+    top: 20px;
+}
+
+.col-lg-4 .table-of-contents {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: none;
+    margin-bottom: 20px;
+}
+
+.table-of-contents {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: none;
+}
+
+.col-lg-4 .table-of-contents .toc-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #003a51;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.table-of-contents .toc-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #003a51;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* TOC List Styles - Clean and Minimal */
+.toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.toc-list.numbered {
+    counter-reset: toc-counter;
+}
+
+.toc-list.numbered .toc-item {
+    counter-increment: toc-counter;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.toc-list.numbered .toc-item::before {
+    content: counter(toc-counter);
+    color: #003a51;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    min-width: 20px;
+    text-align: left;
+    flex-shrink: 0;
+    margin-right: 12px;
+    line-height: 1.4;
+}
+
+.toc-item {
+    margin-bottom: 6px;
+    position: relative;
+}
+
+.toc-item a {
+    color: #003a51 !important;
+    border-bottom: none !important;
+}
+
+.toc-link {
+    display: block;
+    color: #1a1a1a;
+    text-decoration: none;
+    padding: 8px 0;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+    flex: 1;
+    text-align: left;
+    transition: none;
+}
+
+.toc-link:hover {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.toc-link.active {
+    color: #003a51;
+    font-weight: 600;
+}
+
+/* Nested heading styles */
+.toc-item.level-4 .toc-link {
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.toc-item.level-5 .toc-link {
+    padding-left: 40px;
+    font-size: 14px;
+}
+
+.toc-item.level-6 .toc-link {
+    padding-left: 60px;
+    font-size: 13px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .table-of-contents-wrapper {
+        margin: 20px 0 30px;
+    }
+    
+    .table-of-contents {
+        padding: 16px;
+    }
+    
+    .toc-title {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+    
+    .toc-link {
+        font-size: 14px;
+        padding: 6px 0;
+    }
+}

@@ -1,0 +1,451 @@
+{
+    "key": "group_how_it_works",
+    "title": "Block: How It Works",
+    "fields": [
+        {
+            "key": "field_awshiw_how_title",
+            "label": "How It Works Title",
+            "name": "how_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Title for the How It Works section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "How Hawkeye prevents the 3 AM bridge on AWS",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_awshiw_how_description",
+            "label": "How It Works Description",
+            "name": "how_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Description for the How It Works section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Three steps from noise to normal — optimized for AWS.",
+            "maxlength": "",
+            "rows": 2,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_awshiw_button_2",
+            "label": "Button 2",
+            "name": "button_2",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "CTA button for How It Works section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_awshiw_steps",
+            "label": "Steps",
+            "name": "steps",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add the three process steps",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 1,
+            "max": 5,
+            "layout": "table",
+            "button_label": "Add Step",
+            "collapsed": "field_awshiw_step_number",
+            "sub_fields": [
+                {
+                    "key": "field_awshiw_step_number",
+                    "label": "Step Number",
+                    "name": "step_number",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Step number (e.g., 01, 02, 03)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "15",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "01",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_awshiw_step_label",
+                    "label": "Step Label",
+                    "name": "step_label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Step label (e.g., Observe, Diagnose, Resolve)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "Observe",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_awshiw_step_title",
+                    "label": "Step Title",
+                    "name": "step_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Step heading",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "Ingest & correlate",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_awshiw_step_description",
+                    "label": "Step Description",
+                    "name": "step_description",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Step details",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "35",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "placeholder": "",
+                    "new_lines": "br"
+                }
+            ]
+        },
+        {
+            "key": "field_awshiw_metrics",
+            "label": "Metrics",
+            "name": "metrics",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add metric cards (typically 3)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 1,
+            "max": 5,
+            "layout": "table",
+            "button_label": "Add Metric",
+            "collapsed": "field_awshiw_metric_value",
+            "sub_fields": [
+                {
+                    "key": "field_awshiw_metric_value",
+                    "label": "Metric Value",
+                    "name": "metric_value",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Metric value (e.g., 92%, 80%+, <5)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "92%",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_awshiw_metric_label",
+                    "label": "Metric Label",
+                    "name": "metric_label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Metric description",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "70",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "MTTR reduction*",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        },
+        {
+            "key": "field_awshiw_metrics_footnote",
+            "label": "Metrics Footnote",
+            "name": "metrics_footnote",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional footnote text for metrics",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "*Representative outcome from customer case study. Results vary by environment and data quality.",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_awshiw_webinars_title",
+            "label": "Webinars Title",
+            "name": "webinars_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Title for the webinars section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Register for upcoming AWS webinars",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_awshiw_webinars_description",
+            "label": "Webinars Description",
+            "name": "webinars_description",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Description for the webinars section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Co-hosted with PagerDuty and Slack.",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_awshiw_webinars",
+            "label": "Webinars",
+            "name": "webinars",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add webinar items (typically 2)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 1,
+            "max": 5,
+            "layout": "block",
+            "button_label": "Add Webinar",
+            "collapsed": "field_awshiw_webinar_title",
+            "sub_fields": [
+                {
+                    "key": "field_awshiw_webinar_type",
+                    "label": "Webinar Type",
+                    "name": "webinar_type",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Webinar type/label (e.g., Webinar • Co-hosted with PagerDuty)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "Webinar • Co-hosted with PagerDuty",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_awshiw_webinar_title",
+                    "label": "Webinar Title",
+                    "name": "webinar_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Webinar title",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "Building Trust Without War Rooms (AWS)",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_awshiw_webinar_description",
+                    "label": "Webinar Description",
+                    "name": "webinar_description",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Webinar description",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "placeholder": "",
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_awshiw_webinar_button_text",
+                    "label": "Button Text",
+                    "name": "webinar_button_text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "CTA button text",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_awshiw_webinar_button_url",
+                    "label": "Button URL",
+                    "name": "webinar_button_url",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "CTA button URL",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "https://example.com"
+                },
+                {
+                    "key": "field_awshiw_webinar_button_style",
+                    "label": "Button Style",
+                    "name": "webinar_button_style",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Button style",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "primary": "Primary",
+                        "secondary": "Secondary"
+                    },
+                    "default_value": "primary",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "placeholder": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/how-it-works"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Three-step process, metrics, and webinars section",
+    "show_in_rest": 0,
+    "modified": 1735689600
+}
+

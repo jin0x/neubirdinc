@@ -1,0 +1,145 @@
+.values {
+  position: relative;
+  background: #d9e7ec;
+  padding-top: 96px;
+  padding-bottom: 96px;
+
+  @media (max-width: 767.98px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .content-area {
+    .top-title {
+      margin-bottom: 64px;
+      .text-box {
+        width: 586px;
+        max-width: 100%;
+
+        p {
+          margin-bottom: 24px;
+
+          @media (max-width: 767.98px) {
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+
+    .accordion {
+      .accordion-item {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #55ae36;
+
+        .accordion-header {
+          .accordion-button {
+            color: #003a51;
+            font-family: "PP Neue Montreal";
+            font-size: 27px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 35px;
+            background-color: transparent;
+            padding: 22.5px 32px 22.5px 0;
+            position: relative;
+            box-shadow: none;
+
+            @media (max-width: 991.98px) {
+              padding: 16px 24px 16px 0;
+              font-size: 24px;
+              line-height: 115%;
+            }
+
+            &::after {
+              content: "";
+              width: 24px;
+              height: 24px;
+              position: absolute;
+              right: 0;
+              top: 28px;
+              background-image: url(../../images/svg/icon-minus.svg);
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              transition: all 0s;
+
+              @media (max-width: 991.98px) {
+                width: 16px;
+                height: 16px;
+                top: 22px;
+              }
+            }
+
+            span {
+              width: calc(100% - 600px);
+
+              @media (max-width: 991.98px) {
+                width: 100%;
+              }
+            }
+
+            &.collapsed {
+              &::after {
+                background-image: url(../../images/svg/icon-plus.svg);
+              }
+            }
+          }
+        }
+        .accordion-collapse {
+          transition: all 0s;
+          .accordion-body {
+            padding: 1.5px 0 24px;
+            display: flex;
+            flex-wrap: wrap;
+            padding-right: 80px;
+            column-gap: 56px;
+
+            @media (max-width: 991.98px) {
+              padding-right: 0;
+              padding: 0 0 16px;
+            }
+
+            .content-text {
+              flex: 0 0 calc(100% - 562px);
+              max-width: calc(100% - 562px);
+
+              @media (max-width: 991.98px) {
+                flex: 0 0 100%;
+                max-width: 100%;
+              }
+              p {
+                color: #394149;
+                font-family: "PP Neue Montreal";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 135%;
+                margin-bottom: 24px;
+
+                @media (max-width: 991.98px) {
+                  margin-bottom: 16px;
+                }
+              }
+            }
+            .image-box {
+              flex: 0 0 506px;
+              max-width: 506px;
+              margin-top: -59px;
+
+              @media (max-width: 991.98px) {
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-top: 8px;
+              }
+
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

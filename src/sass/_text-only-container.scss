@@ -1,0 +1,56 @@
+.text-only-container {
+  position: relative;
+  padding-top: 128px;
+  padding-bottom: 128px;
+  background: #f7f8f8;
+
+  @media (max-width: 767.98px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .content-area {
+    .text-box {
+      width: 1015px;
+      max-width: 100%;
+
+      h1 {
+        margin-bottom: 48px;
+
+        @media (max-width: 767.98px) {
+          margin-bottom: 32px;
+        }
+      }
+      h2 {
+        margin-top: 48px;
+        margin-bottom: 16px;
+
+        @media (max-width: 767.98px) {
+          margin-top: 32px;
+          margin-bottom: 8px;
+        }
+      }
+      h6 {
+        margin-bottom: 16px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+      ul {
+        margin-top: -20px;
+        li {
+          color: #003a51;
+          font-family: "PP Neue Montreal";
+          font-size: 21px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 133.333%;
+
+          @media (max-width: 767.98px) {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

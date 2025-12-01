@@ -1,0 +1,695 @@
+/* ========================================
+   TESTIMONIAL TABBED SECTION - ORIGINAL DESIGN PRINCIPLES
+   ======================================== */
+
+/* Reset and Base Styles */
+.testimonials.testimonials-tabbed {
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: 'PP Neue Montreal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: transparent;
+    position: relative;
+}
+
+.testimonials-tabbed .content-area {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #e9ecef;
+}
+
+/* ========================================
+   TAB NAVIGATION DESIGN - ORIGINAL STYLE
+   ======================================== */
+
+.testimonial-tabs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: transparent;
+    padding: 20px 20px;
+    border-bottom: 1px solid #e9ecef;
+    gap: 25px;
+    position: relative;
+    flex-wrap: wrap;
+    overflow: visible;
+}
+
+/* Tab Button Styling - Clean Original Style */
+.testimonial-tab {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    min-width: auto;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    flex-shrink: 0;
+}
+
+.testimonial-tab::before {
+    display: none;
+}
+
+.testimonial-tab:hover {
+    transform: none;
+    box-shadow: none;
+    border: none;
+    opacity: 0.7;
+}
+
+.testimonial-tab.active {
+    background: transparent;
+    border: none;
+    transform: none;
+    box-shadow: none;
+    z-index: 1;
+    opacity: 1;
+}
+
+.testimonial-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: #003a51;
+    border-radius: 0;
+}
+
+/* Tab Image Styling - Original Clean Style */
+.testimonial-tab img {
+    max-width: 96px;
+    max-height: 40px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(70%) opacity(0.8);
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.testimonial-tab:hover img {
+    filter: grayscale(30%) opacity(0.9);
+    transform: none;
+}
+
+.testimonial-tab.active img {
+    filter: grayscale(0%) opacity(1);
+    transform: none;
+}
+
+/* ========================================
+   TESTIMONIAL CONTENT AREA - ORIGINAL STYLE
+   ======================================== */
+
+.testimonial-content {
+    position: relative;
+    min-height: 300px;
+    padding: 40px 30px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.testimonial-panel {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.testimonial-panel.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   TESTIMONIAL BOX LAYOUT - ORIGINAL STYLE
+   ======================================== */
+
+.testimonial-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    position: relative;
+    overflow: visible;
+    border: none;
+}
+
+.testimonial-box::before {
+    display: none;
+}
+
+.testimonial-box::after {
+    display: none;
+}
+
+/* ========================================
+   IMAGE AREA STYLING - ORIGINAL CLEAN STYLE
+   ======================================== */
+
+.image-area {
+    flex: 0 0 150px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    box-shadow: none;
+    background: #f8f9fa;
+}
+
+.image-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: none;
+    will-change: auto;
+    backface-visibility: visible;
+    display: block;
+    opacity: 1;
+}
+
+.testimonial-box:hover .image-area img {
+    transform: none;
+}
+
+.image-area::before {
+    display: none;
+}
+
+.testimonial-box:hover .image-area::before {
+    display: none;
+}
+
+/* ========================================
+   TEXT AREA STYLING - ORIGINAL CLEAN STYLE
+   ======================================== */
+
+.text-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+    padding-left: 0;
+}
+
+.testimonial-quote {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333333;
+    font-style: italic;
+    margin: 0;
+    position: relative;
+    font-family: 'PP Neue Montreal', sans-serif;
+    font-weight: 400;
+    padding: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.testimonial-quote::before {
+    content: '"';
+    font-size: 24px;
+    color: #666666;
+    position: absolute;
+    left: -15px;
+    top: 0;
+    line-height: 1;
+    opacity: 0.6;
+    font-family: Georgia, serif;
+    font-weight: normal;
+}
+
+.testimonial-quote::after {
+    content: '"';
+    font-size: 24px;
+    color: #666666;
+    position: absolute;
+    right: -15px;
+    bottom: 0;
+    line-height: 1;
+    opacity: 0.6;
+    font-family: Georgia, serif;
+    font-weight: normal;
+}
+
+/* Meta Information - Original Clean Style */
+.testi-meta {
+    padding-top: 15px;
+    border-top: none;
+    position: relative;
+}
+
+.testi-meta::before {
+    display: none;
+}
+
+.testi-meta p {
+    margin: 0;
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.4;
+}
+
+.testi-meta strong {
+    color: #333333;
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'PP Neue Montreal', sans-serif;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MAINTAINING ORIGINAL PRINCIPLES
+   ======================================== */
+
+/* Desktop (1024px and above) - Optimized Layout */
+@media (min-width: 1024px) {
+    .testimonials.testimonials-tabbed {
+        background: transparent;
+    }
+    
+    .testimonials-tabbed .content-area {
+        background: transparent;
+        border: none;
+    }
+    
+    .testimonial-tabs {
+        justify-content: flex-start;
+        background: transparent;
+        padding: 15px 20px;
+        border-bottom: 1px solid #e9ecef;
+        gap: 15px;
+    }
+    
+    .testimonial-tab {
+        padding: 10px 15px;
+    }
+    
+    .testimonial-tab img {
+        max-width: 96px;
+        max-height: 40px;
+    }
+    
+    .testimonial-content {
+        background: transparent;
+    }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .testimonials.testimonials-tabbed {
+        margin: 40px auto;
+        padding: 0 15px;
+    }
+    
+    .testimonial-tabs {
+        padding: 25px 15px;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    
+    .testimonial-tab {
+        padding: 12px 15px;
+    }
+    
+    .testimonial-tab img {
+        max-width: 80px;
+        max-height: 32px;
+    }
+    
+    .testimonial-content {
+        padding: 30px 20px;
+        min-height: 280px;
+    }
+    
+    .testimonial-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        align-items: center;
+    }
+    
+    .image-area {
+        flex: 0 0 120px;
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+    
+    .text-area {
+        padding-left: 0;
+        text-align: center;
+        gap: 18px;
+    }
+    
+    .testimonial-quote {
+        font-size: 17px;
+        padding: 0 10px;
+    }
+    
+    .testimonial-quote::before {
+        left: -10px;
+    }
+    
+    .testimonial-quote::after {
+        right: -10px;
+    }
+}
+
+/* Mobile (640px - 767px) */
+@media (max-width: 767px) and (min-width: 640px) {
+    .testimonials.testimonials-tabbed {
+        margin: 30px auto;
+        padding: 0 10px;
+    }
+    
+    .testimonial-tabs {
+        padding: 20px 10px;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    
+    .testimonial-tab {
+        padding: 10px 12px;
+    }
+    
+    .testimonial-tab img {
+        max-width: 72px;
+        max-height: 28px;
+    }
+    
+    .testimonial-content {
+        padding: 25px 15px;
+        min-height: 260px;
+    }
+    
+    .testimonial-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .image-area {
+        flex: 0 0 100px;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .text-area {
+        gap: 15px;
+    }
+    
+    .testimonial-quote {
+        font-size: 16px;
+        padding: 0 8px;
+    }
+    
+    .testimonial-quote::before {
+        left: -8px;
+        font-size: 20px;
+    }
+    
+    .testimonial-quote::after {
+        right: -8px;
+        font-size: 20px;
+    }
+    
+    .testi-meta strong {
+        font-size: 15px;
+    }
+    
+    .testi-meta p {
+        font-size: 13px;
+    }
+}
+
+/* Small Mobile (480px - 639px) */
+@media (max-width: 639px) and (min-width: 480px) {
+    .testimonials.testimonials-tabbed {
+        margin: 25px auto;
+        padding: 0 8px;
+    }
+    
+    .testimonial-tabs {
+        padding: 15px 8px;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    
+    .testimonial-tab {
+        padding: 8px 10px;
+    }
+    
+    .testimonial-tab img {
+        max-width: 64px;
+        max-height: 24px;
+    }
+    
+    .testimonial-content {
+        padding: 20px 12px;
+        min-height: 240px;
+    }
+    
+    .testimonial-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 18px;
+        align-items: center;
+    }
+    
+    .image-area {
+        flex: 0 0 90px;
+        width: 90px;
+        height: 90px;
+    }
+    
+    .text-area {
+        gap: 12px;
+    }
+    
+    .testimonial-quote {
+        font-size: 15px;
+        line-height: 1.5;
+        padding: 0 5px;
+    }
+    
+    .testimonial-quote::before {
+        left: -6px;
+        font-size: 18px;
+    }
+    
+    .testimonial-quote::after {
+        right: -6px;
+        font-size: 18px;
+    }
+    
+    .testi-meta {
+        padding-top: 12px;
+    }
+    
+    .testi-meta strong {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+    
+    .testi-meta p {
+        font-size: 12px;
+    }
+}
+
+/* Extra Small Mobile (320px - 479px) */
+@media (max-width: 479px) {
+    .testimonials.testimonials-tabbed {
+        margin: 20px auto;
+        padding: 0 5px;
+    }
+    
+    .testimonial-tabs {
+        padding: 12px 5px;
+        gap: 10px;
+        flex-wrap: wrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+    }
+    
+    .testimonial-tab {
+        padding: 6px 8px;
+        flex-shrink: 0;
+    }
+    
+    .testimonial-tab img {
+        max-width: 56px;
+        max-height: 20px;
+    }
+    
+    .testimonial-content {
+        padding: 18px 10px;
+        min-height: 220px;
+    }
+    
+    .testimonial-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .image-area {
+        flex: 0 0 80px;
+        width: 80px;
+        height: 80px;
+    }
+    
+    .text-area {
+        gap: 10px;
+    }
+    
+    .testimonial-quote {
+        font-size: 14px;
+        line-height: 1.4;
+        padding: 0 3px;
+    }
+    
+    .testimonial-quote::before {
+        left: -5px;
+        font-size: 16px;
+    }
+    
+    .testimonial-quote::after {
+        right: -5px;
+        font-size: 16px;
+    }
+    
+    .testi-meta {
+        padding-top: 10px;
+    }
+    
+    .testi-meta strong {
+        font-size: 13px;
+        margin-bottom: 3px;
+    }
+    
+    .testi-meta p {
+        font-size: 11px;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY & PERFORMANCE
+   ======================================== */
+
+/* Focus States */
+.testimonial-tab:focus {
+    outline: 2px solid #003a51;
+    outline-offset: 2px;
+}
+
+.testimonial-tab:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .testimonial-tab,
+    .testimonial-panel,
+    .image-area img,
+    .testimonial-box {
+        transition: none;
+        animation: none;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .testimonial-tab {
+        border: 1px solid #000;
+    }
+    
+    .testimonial-tab.active {
+        background: #000;
+        color: #fff;
+    }
+    
+    .testimonials-tabbed .content-area {
+        border: 2px solid #000;
+    }
+    
+    .testimonial-quote::before,
+    .testimonial-quote::after {
+        color: #000;
+    }
+}
+
+/* Performance Optimizations */
+.image-area img {
+    will-change: auto;
+    backface-visibility: visible;
+}
+
+.testimonial-tabs {
+    scroll-behavior: smooth;
+}
+
+/* Loading State for Images */
+.image-area {
+    background-color: #f8f9fa;
+}
+
+.image-area img {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.image-area img:not([src]) {
+    opacity: 0;
+}
+
+.image-area img.loaded {
+    opacity: 1;
+}

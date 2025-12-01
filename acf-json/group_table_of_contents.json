@@ -1,0 +1,167 @@
+{
+    "key": "group_table_of_contents",
+    "title": "Table of Contents Block",
+    "fields": [
+        {
+            "key": "field_toc_title",
+            "label": "Title",
+            "name": "toc_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Enter the title for the table of contents section.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Table of Contents",
+            "maxlength": "",
+            "placeholder": "Table of Contents",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_toc_heading_levels",
+            "label": "Heading Levels to Include",
+            "name": "toc_heading_levels",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "Select which heading levels should be included in the table of contents.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h2": "H2 - Main Headings",
+                "h3": "H3 - Sub Headings",
+                "h4": "H4 - Sub-sub Headings",
+                "h5": "H5 - Minor Headings",
+                "h6": "H6 - Smallest Headings"
+            },
+            "default_value": [
+                "h3",
+                "h4"
+            ],
+            "return_format": "value",
+            "allow_custom": 0,
+            "layout": "vertical",
+            "toggle": 0,
+            "save_custom": 0,
+            "custom_choice_button_text": "Add new choice"
+        },
+        {
+            "key": "field_toc_display_style",
+            "label": "Default Display State",
+            "name": "toc_display_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose how the table of contents should appear by default.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "expanded": "Expanded (visible)",
+                "collapsed": "Collapsed (hidden)"
+            },
+            "default_value": "expanded",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_toc_enable_smooth_scroll",
+            "label": "Enable Smooth Scrolling",
+            "name": "toc_enable_smooth_scroll",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Enable smooth scrolling when clicking on table of contents links.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_toc_enable_numbering",
+            "label": "Enable Numbering",
+            "name": "toc_enable_numbering",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Add numbers (1., 2., 3., etc.) before each table of contents item.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_toc_sticky_position",
+            "label": "Sticky Position",
+            "name": "toc_sticky_position",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Make the table of contents stick to the top of the page when scrolling (desktop only).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/table-of-contents"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Configuration options for the Table of Contents block.",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": "",
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "modified": 1760162400
+}

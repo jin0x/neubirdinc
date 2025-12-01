@@ -1,0 +1,237 @@
+/* Use Cases Table Block Styles */
+
+.use-cases-table {
+    padding: 80px 0;
+    background: #fff;
+    position: relative;
+}
+
+.use-cases-table .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Header Styles */
+.use-cases-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.use-cases-title {
+    font-family: "PP Neue Montreal", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #003a51;
+    margin: 0 0 16px 0;
+    letter-spacing: -0.5px;
+}
+
+.use-cases-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #334e68;
+    margin: 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Table Wrapper */
+.use-cases-table-wrapper {
+    overflow-x: visible;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Table Styles */
+.use-cases-table-grid {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
+}
+
+.use-cases-table-grid thead {
+    background: #f7f9fb;
+}
+
+.use-cases-table-grid th {
+    padding: 20px 24px;
+    text-align: center;
+    font-family: "PP Neue Montreal", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #003a51;
+    border: 1px solid rgba(0, 58, 81, 0.1);
+    vertical-align: middle;
+}
+
+.use-cases-table-grid tbody tr {
+    border-bottom: 1px solid rgba(0, 58, 81, 0.1);
+}
+
+.use-cases-table-grid tbody tr:last-child {
+    border-bottom: none;
+}
+
+.use-cases-table-grid td {
+    padding: 32px 24px;
+    vertical-align: top;
+    border-right: 1px solid rgba(0, 58, 81, 0.1);
+    background: #fff;
+}
+
+.use-cases-table-grid td:last-child {
+    border-right: none;
+}
+
+/* Cell Content */
+.use-case-cell {
+    position: relative;
+}
+
+.use-case-row-title {
+    font-family: "PP Neue Montreal", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #003a51;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.use-case-content {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #334e68;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.use-case-content p {
+    margin: 0 0 12px 0;
+    line-height: 1.7;
+}
+
+.use-case-content p:last-child {
+    margin-bottom: 0;
+}
+
+.use-case-content ul,
+.use-case-content ol {
+    margin: 12px 0;
+    padding-left: 20px;
+}
+
+.use-case-content li {
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+
+.use-case-content strong {
+    font-weight: 600;
+    color: #003a51;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .use-cases-table {
+        padding: 60px 0;
+    }
+    
+    .use-cases-title {
+        font-size: 36px;
+    }
+    
+    .use-cases-description {
+        font-size: 16px;
+    }
+    
+    .use-cases-table-grid th {
+        font-size: 18px;
+        padding: 16px 20px;
+    }
+    
+    .use-cases-table-grid td {
+        padding: 24px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .use-cases-table {
+        padding: 48px 0;
+    }
+    
+    .use-cases-header {
+        margin-bottom: 32px;
+    }
+    
+    .use-cases-title {
+        font-size: 28px;
+    }
+    
+    .use-cases-table-wrapper {
+        margin: 0;
+        padding: 0;
+        overflow-x: visible;
+    }
+    
+    .use-cases-table-grid {
+        display: block;
+        width: 100%;
+        overflow-x: visible;
+    }
+    
+    .use-cases-table-grid thead {
+        display: none;
+    }
+    
+    .use-cases-table-grid tbody {
+        display: block;
+    }
+    
+    .use-cases-table-grid tbody tr {
+        display: block;
+        margin-bottom: 24px;
+        border: 1px solid rgba(0, 58, 81, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        background: #fff;
+    }
+    
+    .use-cases-table-grid td {
+        display: block;
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 58, 81, 0.1);
+        padding: 20px 16px;
+        width: 100%;
+    }
+    
+    .use-cases-table-grid td:last-child {
+        border-bottom: none;
+    }
+    
+    .use-case-row-title {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .use-case-content {
+        font-size: 15px;
+    }
+    
+    /* Add column header as pseudo-element on mobile */
+    .use-cases-table-grid td:first-child:before {
+        content: attr(data-label);
+        font-family: "PP Neue Montreal", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        color: #003a51;
+        display: block;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+}
+

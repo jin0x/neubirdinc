@@ -1,0 +1,411 @@
+/* Hero with Timeline Block Styles */
+.hero-timeline {
+    padding: 80px 0 0;
+    position: relative;
+}
+
+.hero-timeline .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.hero-timeline .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.hero-timeline .hero-left {
+    text-align: left;
+}
+
+.hero-timeline .hero-pretitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #003a51;
+    background: rgba(0, 58, 81, 0.1);
+    border: 1px solid rgba(0, 58, 81, 0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.hero-timeline .hero-pretitle-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #008c61;
+    display: inline-block;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.hero-timeline .hero-title {
+    font-family: "PP Neue Montreal", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #003a51;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.hero-timeline .hero-title span {
+    color: #008c61;
+}
+
+.hero-timeline .hero-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #334e68;
+    margin-bottom: 32px;
+    max-width: 600px;
+}
+
+.hero-timeline .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.hero-timeline .hero-buttons:empty {
+    display: none;
+}
+
+.hero-timeline .hero-buttons .btn {
+    min-width: 180px;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-timeline .hero-buttons .btn-secondary {
+    background-color: #FF7F5C;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-timeline .hero-buttons .btn-secondary:hover {
+    background-color: #ff6b47;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Match pricing hero button palette */
+.hero-timeline .hero-buttons .btn-green-primary {
+    background-color: #00A651; /* standard CTA green */
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 166, 81, 0.2);
+}
+
+.hero-timeline .hero-buttons .btn-green-primary:hover {
+    background-color: #009f49; /* match global hover */
+    box-shadow: 0 6px 12px rgba(0, 166, 81, 0.3);
+    transform: translateY(-2px);
+}
+
+.hero-timeline .hero-buttons .btn-orange {
+    background-color: #FF7F5C;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-timeline .hero-buttons .btn-orange:hover {
+    background-color: #ff6b47;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.hero-timeline .hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 16px; /* increased size for rotating text */
+    color: #003a51;
+    margin-top: 12px;
+    margin-bottom: 24px; /* ample space above button */
+}
+
+.hero-timeline .hero-stats:empty {
+    display: none;
+}
+
+.hero-timeline .hero-stat {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0; /* plain text for rotating items */
+    background: none;
+    border: none;
+    border-radius: 0;
+}
+
+/* Badge styling only for numeric/value stat */
+.hero-timeline .hero-stat.has-value {
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 9999px;
+    background: rgba(0, 58, 81, 0.06);
+    border: 1px solid rgba(0, 58, 81, 0.12);
+}
+
+.hero-timeline .hero-stat.has-value::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #008c61, #06b6d4);
+    flex-shrink: 0;
+}
+
+.hero-timeline .hero-stat-value {
+    color: #008c61;
+    font-weight: 700;
+    font-size: 18px; /* slightly larger value text */
+}
+
+.hero-timeline .hero-stat-label {
+    font-weight: 500;
+}
+
+.hero-timeline .hero-right {
+    position: relative;
+}
+
+.hero-timeline .timeline-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hero-timeline .timeline-card,
+.hero-timeline .noise-filter-card {
+    background: #f7f9fb;
+    border: 1px solid rgba(0, 58, 81, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 58, 81, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-timeline .timeline-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #008c61, #06b6d4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hero-timeline .timeline-card:hover::before {
+    opacity: 1;
+}
+
+.hero-timeline .timeline-card:hover,
+.hero-timeline .noise-filter-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 58, 81, 0.1);
+    border-color: rgba(0, 140, 97, 0.2);
+}
+
+.hero-timeline .timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #334e68;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.hero-timeline .timeline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hero-timeline .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #003a51;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hero-timeline .timeline-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-timeline .timeline-item:hover .timeline-dot {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.8);
+}
+
+.hero-timeline .timeline-dot.timeline-cyan {
+    background: #06b6d4;
+}
+
+.hero-timeline .timeline-dot.timeline-emerald {
+    background: #10b981;
+}
+
+.hero-timeline .timeline-dot.timeline-fuchsia {
+    background: #d946ef;
+}
+
+.hero-timeline .timeline-dot.timeline-amber {
+    background: #f59e0b;
+}
+
+.hero-timeline .timeline-content {
+    flex: 1;
+}
+
+.hero-timeline .timeline-content strong {
+    font-weight: 600;
+}
+
+.hero-timeline .timeline-content code {
+    background: rgba(0, 58, 81, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 13px;
+}
+
+.hero-timeline .noise-filter-label {
+    font-size: 12px;
+    color: #334e68;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.hero-timeline .noise-filter-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #003a51;
+    margin: 0;
+}
+
+.hero-timeline .trust-badges {
+    background: rgba(0, 58, 81, 0.03);
+    border-top: 1px solid rgba(0, 58, 81, 0.1);
+    border-bottom: 1px solid rgba(0, 58, 81, 0.1);
+    padding: 32px 0;
+    margin-top: 40px;
+}
+
+.hero-timeline .trust-badges-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    font-size: 14px;
+    color: #334e68;
+}
+
+.hero-timeline .trust-badges-content:empty {
+    display: none;
+}
+
+.hero-timeline .trust-badges-text {
+    font-weight: 500;
+}
+
+.hero-timeline .trust-badges-logo {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+}
+
+.hero-timeline .trust-badges-description {
+    font-size: 12px;
+    color: #334e68;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .hero-timeline .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .hero-timeline .hero-title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-timeline {
+        padding: 40px 0 0;
+    }
+    
+    .hero-timeline .container {
+        padding: 0 16px;
+    }
+    
+    .hero-timeline .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-timeline .hero-description {
+        font-size: 16px;
+    }
+    
+    .hero-timeline .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .hero-timeline .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero-timeline .hero-stats {
+        flex-direction: column;
+        gap: 12px;
+        font-size: 15px; /* comfortable on mobile */
+        margin-bottom: 20px;
+    }
+    
+    .hero-timeline .trust-badges-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+}
+

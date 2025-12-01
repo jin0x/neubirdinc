@@ -1,0 +1,33 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .circle {
+      fill: none;
+      stroke: #e0e6ef;
+      stroke-width: 1;
+    }
+  </style>
+  
+  <!-- First row of circles -->
+  <circle class="circle" cx="100" cy="100" r="100" />
+  <circle class="circle" cx="300" cy="100" r="100" />
+  <circle class="circle" cx="500" cy="100" r="100" />
+  <circle class="circle" cx="700" cy="100" r="100" />
+  
+  <!-- Second row of circles -->
+  <circle class="circle" cx="100" cy="300" r="100" />
+  <circle class="circle" cx="300" cy="300" r="100" />
+  <circle class="circle" cx="500" cy="300" r="100" />
+  <circle class="circle" cx="700" cy="300" r="100" />
+  
+  <!-- Third row of circles -->
+  <circle class="circle" cx="100" cy="500" r="100" />
+  <circle class="circle" cx="300" cy="500" r="100" />
+  <circle class="circle" cx="500" cy="500" r="100" />
+  <circle class="circle" cx="700" cy="500" r="100" />
+  
+  <!-- Fourth row of circles -->
+  <circle class="circle" cx="100" cy="700" r="100" />
+  <circle class="circle" cx="300" cy="700" r="100" />
+  <circle class="circle" cx="500" cy="700" r="100" />
+  <circle class="circle" cx="700" cy="700" r="100" />
+</svg> 

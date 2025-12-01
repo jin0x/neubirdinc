@@ -1,0 +1,224 @@
+.careers {
+  position: relative;
+  background: #f7f8f8;
+  padding-top: 128px;
+  padding-bottom: 128px;
+
+  @media (max-width: 767.98px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .content-area {
+    .top-text {
+      width: 1015px;
+      max-width: 100%;
+      margin-bottom: 100px;
+
+      @media (max-width: 767.98px) {
+        margin-bottom: 64px;
+      }
+
+      h1 {
+        margin-bottom: 48px;
+
+        @media (max-width: 767.98px) {
+          margin-bottom: 16px;
+        }
+      }
+      p {
+        color: #282828;
+        font-family: "PP Neue Montreal";
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px;
+
+        @media (max-width: 767.98px) {
+          font-size: 18px;
+          line-height: 145%;
+        }
+      }
+    }
+    .life-at-neubird {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 70px;
+      row-gap: 8px;
+      margin-bottom: 80px;
+
+      @media (max-width: 767.98px) {
+        margin-bottom: 64px;
+      }
+
+      .left-area {
+        flex: 0 0 calc((100% - 70px) / 2);
+        max-width: calc((100% - 70px) / 2);
+
+        @media (max-width: 767.98px) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+
+        .eyebrow {
+          margin-bottom: 32px;
+
+          @media (max-width: 767.98px) {
+            margin-bottom: 24px;
+          }
+        }
+        .fun-box {
+          margin-bottom: 40px;
+          @media (max-width: 767.98px) {
+            margin-bottom: 24px;
+          }
+          h2 {
+            color: #003a51;
+            line-height: 111.111%;
+            margin-bottom: 16px;
+
+            @media (max-width: 767.98px) {
+              font-size: 24px;
+              line-height: 115%;
+              margin-bottom: 8px;
+            }
+          }
+        }
+      }
+      .right-area {
+        flex: 0 0 calc((100% - 70px) / 2);
+        max-width: calc((100% - 70px) / 2);
+
+        @media (max-width: 767.98px) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+    .open-positions {
+      .eyebrow {
+        margin-bottom: 32px;
+
+        @media (max-width: 767.98px) {
+          margin-bottom: 16px;
+        }
+      }
+      .accordion {
+        .accordion-item {
+          background: #fff;
+          border: none;
+          min-height: 140px;
+          margin-bottom: 24px;
+
+          @media (max-width: 767.98px) {
+            min-height: unset;
+          }
+
+          .accordion-header {
+            .accordion-button {
+              color: #282828;
+              font-size: 26px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 153.846%;
+              background-color: transparent;
+              padding: 24px 60px 24px 24px;
+              position: relative;
+              box-shadow: none;
+
+              @media (max-width: 767.98px) {
+                font-size: 20px;
+                line-height: normal;
+                padding: 16px 40px 16px 16px;
+                flex-direction: column;
+                align-items: flex-start;
+              }
+
+              .address {
+                color: #000;
+                font-family: "Iowan Old Style";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 200%;
+                margin-left: 8px;
+                display: inline-block;
+
+                @media (max-width: 767.98px) {
+                  display: block;
+                  font-size: 18px;
+                  line-height: normal;
+                  margin-left: 0;
+                }
+              }
+
+              .separator {
+                margin: 0 10px;
+
+                @media (max-width: 767.98px) {
+                  margin: 0 6px;
+                }
+              }
+
+              &::after {
+                content: "";
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                right: 24px;
+                top: 24px;
+                background-image: url(../../images/svg/icon-minus.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                transform: none;
+
+                @media (max-width: 767.98px) {
+                  width: 16px;
+                  height: 16px;
+                  right: 16px;
+                  top: 22px;
+                }
+              }
+
+              &.collapsed {
+                &::after {
+                  background-image: url(../../images/svg/icon-plus.svg);
+                }
+              }
+            }
+          }
+          .accordion-collapse {
+            .accordion-body {
+              padding: 0 24px 24px;
+
+              @media (max-width: 767.98px) {
+                padding: 0 16px 16px;
+              }
+
+              .text-box {
+                width: 750px;
+                max-width: 100%;
+
+                p {
+                  color: #282828;
+                  font-size: 26px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 153.846%;
+                  margin-bottom: 24px;
+
+                  @media (max-width: 767.98px) {
+                    font-size: 18px;
+                    line-height: 145%;
+                    margin-bottom: 16px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

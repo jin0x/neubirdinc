@@ -1,0 +1,484 @@
+/* Image Video with Text Styles */
+
+/* Mobile layout adjustments */
+@media (max-width: 767px) {
+  .image_video_w_text,
+  .image_video_w_text_right {
+    padding: 20px 0; /* Reduce top and bottom spacing on mobile */
+  }
+  
+  /* Direct fix for content area display order */
+  .image_video_w_text .content-area,
+  .image_video_w_text_right .content-area {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-direction: column !important;
+  }
+  
+  .image_video_w_text .content-area .media_area,
+  .image_video_w_text_right .content-area .media_area {
+    order: 1 !important;
+  }
+  
+  .image_video_w_text .content-area .text_area,
+  .image_video_w_text_right .content-area .text_area {
+    order: 2 !important;
+  }
+  
+  /* Force column order for all image-video-w-text components */
+  .image_video_w_text .content-area,
+  .image_video_w_text_right .content-area {
+    display: flex !important;
+    gap: 15px !important; /* Reduce gap on mobile */
+    flex-wrap: wrap !important;
+  }
+  
+  .image_video_w_text .media_area,
+  .image_video_w_text .text_area,
+  .image_video_w_text_right .media_area,
+  .image_video_w_text_right .text_area {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .image_video_w_text .media_area,
+  .image_video_w_text_right .media_area {
+    margin-bottom: 20px !important;
+    order: -1 !important; /* Ensure it's always on top */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .image_video_w_text .img_wrap,
+  .image_video_w_text_right .img_wrap {
+    min-height: 200px !important; /* Reduce minimum height on mobile */
+    max-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 8px !important;
+  }
+  
+  .image_video_w_text .text_area,
+  .image_video_w_text_right .text_area {
+    padding: 0 15px !important;
+    text-align: center !important;
+    color: #000 !important; /* Ensure text is visible */
+    background-color: #fff !important; /* Add background to text area */
+    position: relative !important;
+    z-index: 5 !important; /* Ensure text is above any overlays */
+    width: 100% !important;
+    display: block !important;
+  }
+  
+  /* Fix spacing */
+  .image_video_w_text h2,
+  .image_video_w_text_right h2 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .image_video_w_text .text_par,
+  .image_video_w_text_right .text_par {
+    margin-bottom: 15px;
+  }
+  
+  /* Hide image wrap on mobile as requested */
+  .image_video_w_text_right .media_area {
+    display: none !important;
+  }
+  
+  /* Disable overlay on mobile to prevent text visibility issues */
+  .image_video_w_text_right .img_wrap .overlay {
+    display: none !important;
+  }
+  
+  /* Force content to be visible */
+  .image_video_w_text_right .content-area h2,
+  .image_video_w_text_right .content-area p,
+  .image_video_w_text_right .content-area .pretitle,
+  .image_video_w_text_right .content-area .text_par,
+  .image_video_w_text_right .mobile-text-area h2,
+  .image_video_w_text_right .mobile-text-area p,
+  .image_video_w_text_right .mobile-text-area .pretitle,
+  .image_video_w_text_right .mobile-text-area .text_par {
+    color: #000 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+  }
+  
+  /* Mobile-specific styling */
+  .image_video_w_text_right .mobile-text-area {
+    padding: 20px 15px !important;
+    background-color: #fff !important;
+    text-align: center !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* Fix excessive space below text on mobile */
+  .image_video_w_text_right {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* Ensure only one button is visible on mobile */
+  .image_video_w_text_right .mobile-btn-area {
+    margin: 15px auto !important;
+    display: block !important;
+    text-align: center !important;
+  }
+  
+  .image_video_w_text_right .mobile-btn-area .btn {
+    display: inline-block !important;
+    margin: 0 auto !important;
+  }
+}
+
+.image_video_w_text .content-area,
+.image_video_w_text_right .content-area {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.image_video_w_text .btn {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Original block - image on left, text on right */
+.image_video_w_text .content-area {
+    flex-direction: row;
+}
+
+/* New block - text on left, image on right */
+.image_video_w_text_right {
+    position: relative;
+    overflow: hidden;
+}
+
+.image_video_w_text_right {
+    position: relative;
+    overflow: hidden;
+}
+
+.image_video_w_text_right .content-area {
+    display: flex !important;
+    flex-direction: row !important;
+    position: relative;
+    z-index: 2;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px 0 30px;
+    justify-content: space-between;
+}
+
+.image_video_w_text .media_area,
+.image_video_w_text .text_area {
+    flex: 1;
+    min-width: 300px;
+}
+
+.image_video_w_text_right .text_area {
+    flex: 0 0 60%;
+    min-width: 300px;
+    padding-right: 30px;
+    padding-left: 0;
+}
+
+.image_video_w_text_right .media_area {
+    flex: 0 0 40% !important;
+    position: relative !important;
+    min-height: 400px !important;
+    margin-left: auto !important;
+    margin-right: -15px !important;
+    display: block !important;
+    width: 40% !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+
+.image_video_w_text .img_wrap,
+.image_video_w_text_right .img_wrap {
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 0 8px 8px 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.image_video_w_text_right .img_wrap .overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.5) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.image_video_w_text .img_wrap img,
+.image_video_w_text_right .img_wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Specific styling for the main image */
+.image_video_w_text_right .img_wrap .main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    position: relative;
+    z-index: 1;
+    border-radius: 0 8px 8px 0;
+    min-height: 400px;
+}
+
+/* Play button styling */
+.image_video_w_text .img_wrap img:nth-child(2),
+.image_video_w_text_right .img_wrap .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  z-index: 2;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure play button is properly centered on all devices */
+@media (max-width: 767px) {
+  .image_video_w_text .img_wrap img:nth-child(2),
+  .image_video_w_text_right .img_wrap .play-icon {
+    width: 60px;
+    height: 60px;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+  }
+}
+
+.image_video_w_text .strecth_link,
+.image_video_w_text_right .strecth_link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    font-size: 0;
+}
+
+.image_video_w_text h2,
+.image_video_w_text_right h2 {
+    margin-bottom: 20px;
+    font-family: "PP Neue Montreal", sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #003a51;
+    letter-spacing: -0.8px;
+}
+
+.image_video_w_text .pretitle,
+.image_video_w_text_right .pretitle {
+    font-family: "PP Neue Montreal", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #008c61;
+    margin-bottom: 12px;
+    display: inline-block;
+    background: rgba(0, 140, 97, 0.1);
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+.image_video_w_text .text_par,
+.image_video_w_text_right .text_par {
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #334e68;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.image_video_w_text .text_par p,
+.image_video_w_text_right .text_par p {
+    margin-bottom: 16px;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.image_video_w_text .text_par p:last-child,
+.image_video_w_text_right .text_par p:last-child {
+    margin-bottom: 0;
+}
+
+.image_video_w_text .text_par strong,
+.image_video_w_text_right .text_par strong {
+    font-weight: 700;
+    color: #003a51;
+}
+
+.image_video_w_text .text_par ul,
+.image_video_w_text_right .text_par ul {
+    margin: 20px 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.image_video_w_text .text_par li,
+.image_video_w_text_right .text_par li {
+    margin-bottom: 12px;
+    line-height: 1.8;
+    padding-left: 28px;
+    position: relative;
+    font-size: 18px;
+}
+
+.image_video_w_text .text_par li::before,
+.image_video_w_text_right .text_par li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 8px;
+    height: 8px;
+    background: #008c61;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(0, 140, 97, 0.1);
+}
+
+.image_video_w_text .text_par ol,
+.image_video_w_text_right .text_par ol {
+    margin: 20px 0;
+    padding-left: 28px;
+    list-style-type: decimal;
+    list-style-position: outside;
+    counter-reset: list-counter;
+}
+
+.image_video_w_text .text_par ol li,
+.image_video_w_text_right .text_par ol li {
+    counter-increment: list-counter;
+    padding-left: 12px;
+}
+
+.image_video_w_text .text_par ol li::before,
+.image_video_w_text_right .text_par ol li::before {
+    display: none;
+}
+
+.image_video_w_text .text_par p,
+.image_video_w_text_right .text_par p {
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+.image_video_w_text .text_par p:last-child,
+.image_video_w_text_right .text_par p:last-child {
+    margin-bottom: 0;
+}
+
+.image_video_w_text .btn_area,
+.image_video_w_text_right .btn_area {
+    margin-top: 15px;
+}
+
+/* White background specific styles */
+.bg-white {
+    background-color: #ffffff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .image_video_w_text .content-area,
+    .image_video_w_text_right .content-area {
+        padding: 0 15px;
+    }
+
+    .image_video_w_text .img_wrap, .image_video_w_text_right .img_wrap {
+      min-height: 0 !important;
+    }
+
+    .image_video_w_text_right .content-area {
+      display: none !important;
+    }
+    
+    .image_video_w_text .media_area,
+    .image_video_w_text .text_area {
+        width: 100%;
+        order: 2;
+    }
+    
+    .image_video_w_text .media_area {
+        order: 1 !important;
+    }
+    
+    .image_video_w_text_right .media_area,
+    .image_video_w_text_right .text_area {
+        width: 100%;
+        flex: 0 0 100%;
+        padding: 0;
+    }
+    .image_video_w_text_right .media_area {
+        min-height: 400px;
+        margin-bottom: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    
+    .image_video_w_text_right .text_area {
+        position: relative;
+        z-index: 2;
+        padding: 30px 15px;
+        background: transparent;
+        order: 2;
+    }
+    
+    .image_video_w_text_right .btn_area.d-md-none {
+        display: block !important;
+        margin-top: 20px;
+        position: relative;
+        z-index: 10;
+    }
+    
+    /* Override Bootstrap's d-md-none class on mobile */
+    @media (max-width: 767.98px) {
+        .image_video_w_text_right .d-md-none {
+            display: block !important;
+        }
+    }
+    
+    .image_video_w_text_right .img_wrap .overlay {
+        background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.6) 100%);
+    }
+    
+}

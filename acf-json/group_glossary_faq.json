@@ -1,0 +1,214 @@
+{
+    "key": "group_glossary_faq",
+    "title": "Glossary FAQ Settings",
+    "fields": [
+        {
+            "key": "field_glossary_faq_tab",
+            "label": "FAQ Section",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_glossary_faq_header",
+            "label": "FAQ Header",
+            "name": "glossary_faq_header",
+            "type": "text",
+            "instructions": "Enter the main heading for the FAQ section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Frequently Asked Questions",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_glossary_faq_subheading",
+            "label": "FAQ Subheading",
+            "name": "glossary_faq_subheading",
+            "type": "wysiwyg",
+            "instructions": "Optional subheading or description for the FAQ section (supports links and formatting)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_glossary_faq_display_style",
+            "label": "Display Style",
+            "name": "glossary_faq_display_style",
+            "type": "select",
+            "instructions": "Choose how the FAQ items should be displayed by default",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "accordion_closed": "All FAQs closed",
+                "accordion_open": "All FAQs open",
+                "first_open": "First FAQ open, rest closed",
+                "accordion": "Accordion (collapsible)",
+                "static": "Always Open"
+            },
+            "default_value": "accordion_closed",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_glossary_faq_layout",
+            "label": "Layout",
+            "name": "glossary_faq_layout",
+            "type": "select",
+            "instructions": "Choose the layout for displaying FAQ items",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "single": "Single Column",
+                "two-column": "Two Columns"
+            },
+            "default_value": "single",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_glossary_faq_enable_schema",
+            "label": "Enable Schema Markup",
+            "name": "glossary_faq_enable_schema",
+            "type": "true_false",
+            "instructions": "Enable JSON-LD schema markup for better SEO",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_glossary_faq_items",
+            "label": "FAQ Items",
+            "name": "glossary_faq_items",
+            "type": "repeater",
+            "instructions": "Add FAQ questions and answers",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_glossary_faq_question",
+            "button_label": "Add FAQ Item",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_glossary_faq_question",
+                    "label": "Question",
+                    "name": "question",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "placeholder": "Enter your question here...",
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_glossary_faq_answer",
+                    "label": "Answer",
+                    "name": "answer",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
+                    "parent_repeater": "field_glossary_faq_items"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "glossary"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1640995200
+}

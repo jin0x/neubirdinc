@@ -1,0 +1,202 @@
+{
+    "key": "group_glossary_fields",
+    "title": "CPT: Glossary",
+    "fields": [
+        {
+            "key": "field_glossary_content_tab",
+            "label": "Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_glossary_definition",
+            "label": "Definition",
+            "name": "definition",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Enter the definition for this glossary term.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "Enter the definition...",
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_glossary_short_description",
+            "label": "Short Description",
+            "name": "short_description",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "A brief description that appears in the glossary archive listing.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": 200,
+            "placeholder": "Brief description for archive view...",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_glossary_toc_tab",
+            "label": "Table of Contents",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_toc_enable",
+            "label": "Enable Table of Contents",
+            "name": "toc_enable",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Enable table of contents for this glossary page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_toc_title",
+            "label": "Table of Contents Title",
+            "name": "toc_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Title for the table of contents section.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_toc_enable",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Table of Contents",
+            "maxlength": "",
+            "placeholder": "Table of Contents",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_toc_enable_numbering",
+            "label": "Enable TOC Numbering",
+            "name": "toc_enable_numbering",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Add numbers (1., 2., 3., etc.) before each table of contents item.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_toc_enable",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_toc_sticky_position",
+            "label": "Sticky Position",
+            "name": "toc_sticky_position",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Make the table of contents stick to the top of the page when scrolling (desktop only).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_toc_enable",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "glossary"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Fields for glossary terms",
+    "show_in_rest": 1,
+    "modified": 1760181400
+}

@@ -1,0 +1,168 @@
+{
+    "key": "group_67b4a26d3b3f0",
+    "title": "Block: WYSIWIG",
+    "fields": [
+        {
+            "key": "field_67b4b2b5fa69e",
+            "label": "Text",
+            "name": "text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_wysiwig_alignment",
+            "label": "Content Alignment",
+            "name": "content_alignment",
+            "type": "select",
+            "instructions": "Choose how the content should be aligned",
+            "required": 0,
+            "choices": {
+                "left": "Left",
+                "center": "Center",
+                "right": "Right"
+            },
+            "default_value": "left",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_wysiwig_max_width",
+            "label": "Max Width",
+            "name": "max_width",
+            "type": "select",
+            "instructions": "Choose the maximum width of the content area",
+            "required": 0,
+            "choices": {
+                "full": "Full Width",
+                "1200px": "1200px (Standard)",
+                "900px": "900px (Medium)",
+                "700px": "700px (Narrow)",
+                "600px": "600px (Very Narrow)"
+            },
+            "default_value": "1200px",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_wysiwig_background",
+            "label": "Background Color",
+            "name": "background_color",
+            "type": "select",
+            "instructions": "Choose background color for this section",
+            "required": 0,
+            "choices": {
+                "transparent": "Transparent",
+                "white": "White",
+                "light-gray": "Light Gray (#f7f9fb)",
+                "dark": "Dark (#003a51)"
+            },
+            "default_value": "transparent",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_wysiwig_padding",
+            "label": "Vertical Padding",
+            "name": "vertical_padding",
+            "type": "select",
+            "instructions": "Choose the vertical padding for this section",
+            "required": 0,
+            "choices": {
+                "none": "None",
+                "small": "Small (40px)",
+                "medium": "Medium (60px)",
+                "large": "Large (80px)",
+                "xlarge": "Extra Large (100px)"
+            },
+            "default_value": "medium",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_wysiwig_image",
+            "label": "Image",
+            "name": "image",
+            "type": "image",
+            "instructions": "Upload an image to display alongside the text",
+            "required": 0,
+            "conditional_logic": 0,
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_wysiwig_image_position",
+            "label": "Image Position",
+            "name": "image_position",
+            "type": "select",
+            "instructions": "Choose where to display the image",
+            "required": 0,
+            "conditional_logic": 0,
+            "choices": {
+                "right": "Right"
+            },
+            "default_value": "right",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/wysiwig"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1739895483
+}

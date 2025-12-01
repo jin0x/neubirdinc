@@ -1,0 +1,200 @@
+{
+    "key": "group_faq_block",
+    "title": "FAQ Block",
+    "fields": [
+        {
+            "key": "field_faq_header",
+            "label": "FAQ Section Header",
+            "name": "faq_header",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Enter the main header for the FAQ section (H3)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Frequently Asked Questions",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_faq_subheading",
+            "label": "FAQ Section Subheading",
+            "name": "faq_subheading",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Enter an optional subheading or description for the FAQ section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Optional description or subheading...",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_faq_display_style",
+            "label": "Display Style",
+            "name": "faq_display_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose how the FAQs should be displayed by default",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "first_expanded": "First FAQ expanded, others collapsed (default)",
+                "accordion_closed": "All FAQs collapsed",
+                "accordion_open": "All FAQs expanded",
+                "always_open": "Always open (no accordion behavior)"
+            },
+            "default_value": "first_expanded",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_faq_layout",
+            "label": "Layout",
+            "name": "faq_layout",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose the layout for the FAQ section",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "single_column": "Single Column",
+                "two_columns": "Two Columns"
+            },
+            "default_value": "single_column",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_faq_items",
+            "label": "FAQ Items",
+            "name": "faq_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add your FAQ questions and answers",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_faq_question",
+            "min": 1,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add FAQ Item",
+            "sub_fields": [
+                {
+                    "key": "field_faq_question",
+                    "label": "Question",
+                    "name": "question",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Enter the FAQ question (will be displayed as H4)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "What is your question?",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_faq_answer",
+                    "label": "Answer",
+                    "name": "answer",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "Enter the answer to the question. You can use text, lists, and basic formatting.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 1
+                }
+            ]
+        },
+        {
+            "key": "field_faq_enable_schema",
+            "label": "Enable Schema Markup",
+            "name": "faq_enable_schema",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Enable JSON-LD schema markup for better SEO and rich results",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Generate FAQ schema markup for search engines",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/faq-block"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Field group for the FAQ block with schema markup support",
+    "show_in_rest": 0
+}

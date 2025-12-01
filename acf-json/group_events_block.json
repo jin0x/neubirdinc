@@ -1,0 +1,203 @@
+{
+    "key": "group_events_block",
+    "title": "Events Block Settings",
+    "fields": [
+        {
+            "key": "field_events_block_title",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "Enter the block title",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Upcoming Events",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_events_block_number",
+            "label": "Number of Events",
+            "name": "number_of_events",
+            "type": "number",
+            "instructions": "Enter the number of events to display",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": 12,
+            "step": 1
+        },
+        {
+            "key": "field_events_block_layout",
+            "label": "Layout Type",
+            "name": "layout_type",
+            "type": "select",
+            "instructions": "Select the layout style for events",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "grid": "Grid",
+                "list": "List"
+            },
+            "default_value": "grid",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_events_block_show_date",
+            "label": "Show Date",
+            "name": "show_date",
+            "type": "true_false",
+            "instructions": "Show or hide the event date",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_events_block_show_location",
+            "label": "Show Location",
+            "name": "show_location",
+            "type": "true_false",
+            "instructions": "Show or hide the event location",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_events_block_show_excerpt",
+            "label": "Show Excerpt",
+            "name": "show_excerpt",
+            "type": "true_false",
+            "instructions": "Show or hide the event excerpt",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_events_block_show_featured_image",
+            "label": "Show Featured Image",
+            "name": "show_featured_image",
+            "type": "true_false",
+            "instructions": "Show or hide the event featured image",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_events_block_show_future",
+            "label": "Show Only Future Events",
+            "name": "show_only_future_events",
+            "type": "true_false",
+            "instructions": "Only show events with dates in the future",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_events_block_view_all",
+            "label": "Show View All Button",
+            "name": "show_view_all_button",
+            "type": "true_false",
+            "instructions": "Show a button linking to the events archive page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/events-block"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1716667062
+}

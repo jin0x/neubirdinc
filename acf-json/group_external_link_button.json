@@ -1,0 +1,109 @@
+{
+    "key": "group_external_link_button",
+    "title": "Block: External Link Button",
+    "fields": [
+        {
+            "key": "field_external_button_text",
+            "label": "Button Text",
+            "name": "button_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Enter the text to display on the button",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Learn More",
+            "placeholder": "Enter button text",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_external_button_url",
+            "label": "External URL",
+            "name": "external_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Enter the external URL this button should link to",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https://example.com"
+        },
+        {
+            "key": "field_external_button_target",
+            "label": "Open in New Tab",
+            "name": "open_new_tab",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Check this box to open the link in a new tab",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_external_button_style",
+            "label": "Button Style",
+            "name": "button_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose the button style",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "primary": "Primary (Green)",
+                "secondary": "Secondary (White)",
+                "outline": "Outline"
+            },
+            "default_value": "primary",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/external-link-button"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "A button block that links to external URLs",
+    "show_in_rest": 0,
+    "modified": 1736580639
+}

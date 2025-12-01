@@ -1,0 +1,246 @@
+{
+    "key": "group_use_cases_table",
+    "title": "Block: Use Cases Table",
+    "fields": [
+        {
+            "key": "field_uct_section_title",
+            "label": "Section Title",
+            "name": "section_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Main heading for the use cases section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "High-value AWS use cases",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_uct_section_description",
+            "label": "Section Description",
+            "name": "section_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Optional description text below the title",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_uct_column_headers",
+            "label": "Column Headers",
+            "name": "column_headers",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Headers for the three columns",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_uct_col_1",
+                    "label": "Column 1 Header",
+                    "name": "col_1",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_uct_col_2",
+                    "label": "Column 2 Header",
+                    "name": "col_2",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_uct_col_3",
+                    "label": "Column 3 Header",
+                    "name": "col_3",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        },
+        {
+            "key": "field_uct_table_rows",
+            "label": "Table Rows",
+            "name": "table_rows",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add rows to the use cases table (typically 3 rows for a 3x3 grid)",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_uct_row_title",
+            "min": 1,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_uct_row_title",
+                    "label": "Row Title",
+                    "name": "row_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Title for this row (optional, can be left empty)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_uct_cell_1",
+                    "label": "Cell 1 Content",
+                    "name": "cell_1_content",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "Content for the first cell in this row",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_uct_cell_2",
+                    "label": "Cell 2 Content",
+                    "name": "cell_2_content",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "Content for the second cell in this row",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_uct_cell_3",
+                    "label": "Cell 3 Content",
+                    "name": "cell_3_content",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "Content for the third cell in this row",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/use-cases-table"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Field group for the Use Cases Table block - displays a 3x3 grid table with complex cell content",
+    "show_in_rest": 0,
+    "modified": 1735689600
+}
+

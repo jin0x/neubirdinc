@@ -1,0 +1,139 @@
+footer {
+  position: relative;
+  background: #003a51;
+  padding-top: 56px;
+  padding-bottom: 40px;
+
+  @media (max-width: 767.98px) {
+    padding-top: 32px;
+    padding-bottom: 16px;
+  }
+
+  .content-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .footer-logo-area {
+      flex: 0 0 30%;
+      max-width: 30%;
+
+      @media (max-width: 767.98px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 39.4px;
+      }
+
+      a {
+        img {
+          width: 215.41px;
+          object-fit: contain;
+
+          @media (max-width: 767.98px) {
+            width: 141px;
+          }
+        }
+      }
+    }
+    .footer-menu-social {
+      flex: 0 0 65%;
+      max-width: 65%;
+
+      @media (max-width: 767.98px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .footer-menu-area {
+        text-align: right;
+
+        @media (max-width: 767.98px) {
+          text-align: left;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        a {
+          color: #fff;
+          font-family: "PP Neue Montreal";
+          font-size: 19px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          letter-spacing: -0.57px;
+          margin-left: 30px;
+          margin-top: 10px;
+          display: inline-block;
+
+          @media (max-width: 767.98px) {
+            font-size: 16px;
+            letter-spacing: -0.48px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 0;
+          }
+        }
+      }
+      .footer-social-area {
+        margin-top: 105px;
+        text-align: right;
+
+        @media (max-width: 767.98px) {
+          margin-top: 64px;
+          text-align: left;
+        }
+
+        a {
+          display: inline-block;
+          margin-left: 22px;
+
+          @media (max-width: 767.98px) {
+            margin-left: 0;
+            margin-right: 22px;
+          }
+
+          img {
+            height: 16px;
+          }
+        }
+      }
+    }
+    .footer-copyright {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid #fff;
+
+      p {
+        color: #fff;
+        font-family: "Iowan Old Style";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+
+        @media (max-width: 767.98px) {
+          font-size: 14px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+
+          span.separator {
+            display: none;
+          }
+        }
+
+        span {
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+        a {
+          color: inherit;
+        }
+      }
+    }
+  }
+}

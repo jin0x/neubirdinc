@@ -1,0 +1,347 @@
+{
+    "key": "group_events",
+    "title": "Event Details",
+    "fields": [
+        {
+            "key": "field_event_image",
+            "label": "Event Image",
+            "name": "event_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload the main image for this event",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_event_description",
+            "label": "Event Description",
+            "name": "event_description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Enter a brief description of the event. You can add hyperlinks, bullet points, and format text.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 1
+        },
+        {
+            "key": "field_event_location",
+            "label": "Event Location",
+            "name": "event_location",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Enter the location of the event. You can add line breaks for better formatting.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_event_type",
+            "label": "Event Type",
+            "name": "event_type",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "Select whether this is a live event or on-demand content",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "live": "Live Event",
+                "on_demand": "On-demand Content",
+                "in_person": "In Person"
+            },
+            "default_value": "live",
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_event_date",
+            "label": "Event Start Date & Time",
+            "name": "event_date",
+            "aria-label": "",
+            "type": "date_time_picker",
+            "instructions": "Select the start date and optional time. If All-day is enabled, times won’t display.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y g:i a",
+            "return_format": "Y-m-d H:i:s",
+            "first_day": 1
+        },
+        {
+            "key": "field_event_end_date",
+            "label": "Event End Date & Time",
+            "name": "event_end_date",
+            "aria-label": "",
+            "type": "date_time_picker",
+            "instructions": "Optional: end date and time for multi-day events. If All-day is enabled, times won’t display.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y g:i a",
+            "return_format": "Y-m-d H:i:s",
+            "first_day": 1
+        },
+        {
+            "key": "field_event_pacific_time",
+            "label": "Pacific Time",
+            "name": "event_pacific_time",
+            "aria-label": "",
+            "type": "time_picker",
+            "instructions": "Select the Pacific time for this event (optional - will use event date if not specified).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_event_type",
+                        "operator": "==",
+                        "value": "live"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_event_type",
+                        "operator": "==",
+                        "value": "in_person"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "g:i A",
+            "return_format": "g:i A"
+        },
+        {
+            "key": "field_event_eastern_time",
+            "label": "Eastern Time",
+            "name": "event_eastern_time",
+            "aria-label": "",
+            "type": "time_picker",
+            "instructions": "Select the Eastern time for this event (optional - will use event date if not specified).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_event_type",
+                        "operator": "==",
+                        "value": "live"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_event_type",
+                        "operator": "==",
+                        "value": "in_person"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "g:i A",
+            "return_format": "g:i A"
+        },
+        {
+            "key": "field_event_all_day",
+            "label": "All-day Event",
+            "name": "event_all_day",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Check to hide times and treat the event as all-day.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_event_url",
+            "label": "Event URL",
+            "name": "event_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Enter the external URL for the event (if applicable)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https:\/\/example.com"
+        },
+        {
+            "key": "field_button_text",
+            "label": "Button Text",
+            "name": "button_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Custom text for the event button (e.g., 'Watch Now' for on-demand events). Leave empty to use default 'Register Now'.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Watch Now",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_event_calendly_enable",
+            "label": "Enable Calendly",
+            "name": "event_calendly_enable",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Toggle to add a Calendly scheduling button for this event.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_event_calendly_url",
+            "label": "Calendly URL",
+            "name": "event_calendly_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Paste the Calendly scheduling link (e.g., https:\/\/calendly.com\/your-team\/event)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_event_calendly_enable",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https:\/\/calendly.com\/your-team\/event"
+        },
+        {
+            "key": "field_event_calendly_button_text",
+            "label": "Calendly Button Text",
+            "name": "event_calendly_button_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional: custom label for the Calendly button.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_event_calendly_enable",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Book a meeting",
+            "placeholder": "Book a meeting",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "event"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": true,
+    "modified": 1735689600,
+    "local_file": "\/Users\/praveen\/Local Sites\/neubird\/app\/public\/wp-content\/themes\/neubird\/acf-json\/group_events.json"
+}

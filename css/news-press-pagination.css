@@ -1,0 +1,61 @@
+/* News and Press Pagination - Match Blog Archive Exactly */
+.news-press-archive .news-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.news-press-archive .pagination-numbers {
+  display: flex;
+  align-items: center;
+}
+
+.news-press-archive .content-area .news-pagination a.page-number {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  margin: 0 5px !important;
+  border-radius: 0 !important;
+  background-color: #fff !important;
+  color: #003545 !important;
+  text-decoration: none !important;
+  font-weight: normal !important;
+  font-size: 14px !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+.news-press-archive .content-area .news-pagination a.page-number:hover:not(.disabled):not(.current) {
+  background-color: #f0f0f0 !important;
+}
+
+.news-press-archive .content-area .news-pagination a.page-number.current {
+  background-color: #003a51 !important;
+  color: #fff !important;
+}
+
+.news-press-archive .content-area .news-pagination .page-number.disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+.news-press-archive .content-area .news-pagination a.page-number.prev,
+.news-press-archive .content-area .news-pagination a.page-number.next {
+  font-size: 18px !important;
+}
+
+/* Responsive pagination */
+@media (max-width: 768px) {
+    .news-press-archive .news-pagination {
+        margin-top: 30px;
+    }
+    
+    .news-press-archive .content-area .news-pagination a.page-number {
+        width: 30px !important;
+        height: 30px !important;
+        margin: 0 2px !important;
+        font-size: 12px !important;
+    }
+}

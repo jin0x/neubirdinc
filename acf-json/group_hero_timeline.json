@@ -1,0 +1,413 @@
+{
+    "key": "group_hero_timeline",
+    "title": "Block: Hero with Timeline",
+    "fields": [
+        {
+            "key": "field_awsh_pretitle",
+            "label": "Pretitle Badge",
+            "name": "pretitle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Badge text shown above the title",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Eliminate the 3 AM War Room",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_awsh_title",
+            "label": "Title",
+            "name": "title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Main hero heading",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Sleep through the night. Hawkeye handles incidents.",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_awsh_description",
+            "label": "Description",
+            "name": "description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Hero description text",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_awsh_button_1",
+            "label": "Button 1",
+            "name": "button_1",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "First CTA button (e.g., War Room Calculator)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_awsh_button_2",
+            "label": "Button 2",
+            "name": "button_2",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Optional secondary CTA button",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_awsh_stat_1_value",
+            "label": "Stat 1 Value",
+            "name": "stat_1_value",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "First stat value (e.g., 92%)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "92%",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_awsh_stat_1_label",
+            "label": "Stat 1 Label",
+            "name": "stat_1_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "First stat label",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "MTTR reduction*",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_awsh_stat_2_text",
+            "label": "Stat 2 Text",
+            "name": "stat_2_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Second stat text",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "SOC-2 • VPC deploy",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_awsh_stat_3_text",
+            "label": "Stat 3 Text",
+            "name": "stat_3_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Third stat text",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "AWS Marketplace",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_awsh_timeline_title",
+            "label": "Timeline Title",
+            "name": "timeline_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Title for the timeline card",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Incident Timeline",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_awsh_timeline_items",
+            "label": "Timeline Items",
+            "name": "timeline_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add timeline events",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 1,
+            "max": 10,
+            "layout": "table",
+            "button_label": "Add Timeline Item",
+            "collapsed": "field_awsh_ti_time",
+            "sub_fields": [
+                {
+                    "key": "field_awsh_ti_time",
+                    "label": "Time",
+                    "name": "time",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Time stamp (e.g., 02:57)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "02:57",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_awsh_ti_event",
+                    "label": "Event",
+                    "name": "event",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Event description",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "60",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "placeholder": "",
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_awsh_ti_color",
+                    "label": "Color",
+                    "name": "color",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Color indicator for the timeline item",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "cyan": "Cyan",
+                        "emerald": "Emerald",
+                        "fuchsia": "Fuchsia",
+                        "amber": "Amber"
+                    },
+                    "default_value": "cyan",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_awsh_noise_filter_label",
+            "label": "Noise Filter Label",
+            "name": "noise_filter_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Label for the noise filter card",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Noise filter",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_awsh_noise_filter_text",
+            "label": "Noise Filter Text",
+            "name": "noise_filter_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Noise suppression message",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 2,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_awsh_trust_badges_text",
+            "label": "Trust Badges Text",
+            "name": "trust_badges_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional text before trust badges. Leave blank to hide.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_awsh_trust_badges_logo",
+            "label": "Trust Badges Logo",
+            "name": "trust_badges_logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Trust badge logo",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "jpg,jpeg,png,svg,webp",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_awsh_trust_badges_description",
+            "label": "Trust Badges Description",
+            "name": "trust_badges_description",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Description text",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Built for AWS • CloudWatch • EKS • Lambda • EC2 • RDS",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/hero-timeline"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Hero section with timeline showing incident events, trust badges, and CTAs",
+    "show_in_rest": 0,
+    "modified": 1735689600
+}
+

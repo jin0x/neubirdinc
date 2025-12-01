@@ -1,0 +1,495 @@
+/* Steps Grid Block Styles */
+
+.steps-grid-block {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f7f9fb 50%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.steps-grid-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 140, 97, 0.2), transparent);
+}
+
+.steps-grid-block .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Header Styles */
+.steps-grid-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.steps-grid-title {
+    font-family: "PP Neue Montreal", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #003a51;
+    margin: 0 0 20px 0;
+    letter-spacing: -0.5px;
+    position: relative;
+}
+
+.steps-grid-description {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #334e68;
+    margin: 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+}
+
+/* Grid Container */
+.steps-grid-container {
+    display: grid;
+    gap: 28px;
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.steps-grid-block.columns-2 .steps-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.steps-grid-block.columns-3 .steps-grid-container {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.steps-grid-block.columns-4 .steps-grid-container {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Step Card */
+.step-card {
+    background: #fff;
+    border: 1px solid rgba(0, 58, 81, 0.08);
+    border-radius: 16px;
+    padding: 40px 32px;
+    padding-bottom: 90px; /* Extra padding for bottom right icon/number */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.step-card.has-icon {
+    padding-bottom: 90px; /* Ensure space for icon */
+}
+
+.step-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #008c61;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.step-card:hover::before {
+    transform: scaleX(1);
+}
+
+.step-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(0, 140, 97, 0.02);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 50%;
+}
+
+.step-card:hover::after {
+    opacity: 1;
+}
+
+.step-card:hover {
+    box-shadow: 0 12px 40px rgba(0, 58, 81, 0.15);
+    transform: translateY(-8px);
+    border-color: rgba(0, 140, 97, 0.25);
+    background: #fff;
+}
+
+.step-card.has-link {
+    cursor: pointer;
+}
+
+.step-card.has-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 58, 81, 0.15);
+}
+
+.step-card.has-link .step-card-link:hover {
+    text-decoration: none;
+}
+
+.step-card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    text-decoration: none;
+    color: transparent;
+    display: block;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+/* Ensure links inside the content are still clickable */
+.step-content a {
+    position: relative;
+    z-index: 6;
+}
+
+.step-card.has-link .step-content {
+    position: relative;
+    z-index: 2;
+}
+
+.step-card.has-link .step-number-indicator {
+    position: absolute;
+    z-index: 3;
+}
+
+.step-card.has-link .step-icon-wrapper {
+    position: absolute;
+    z-index: 3;
+}
+
+/* Step Number Indicator */
+.step-number-indicator {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.step-number {
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    color: rgba(0, 58, 81, 0.15);
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "PP Neue Montreal", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    transition: color 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.step-card:hover .step-number {
+    color: rgba(0, 58, 81, 0.25);
+}
+
+/* Step Icon Wrapper - Bottom Right (when icon is present) - Blended into card */
+.step-icon-wrapper {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 3;
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.step-card:hover .step-icon-wrapper {
+    opacity: 0.9;
+}
+
+.step-icon-svg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-icon-svg svg {
+    width: 72px;
+    height: 72px;
+    max-width: 72px;
+    max-height: 72px;
+    transition: all 0.3s ease;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    shape-rendering: geometricPrecision;
+}
+
+.step-icon-img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    max-width: 72px;
+    max-height: 72px;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: auto;
+}
+
+/* Icon Color Classes - More visible colors (30% more visible) */
+.step-icon-wrapper.icon-color-cyan .step-icon-svg svg,
+.step-icon-wrapper.icon-color-cyan .step-icon-svg svg * {
+    fill: rgba(6, 182, 212, 0.7) !important;
+    stroke: rgba(6, 182, 212, 0.6) !important;
+}
+
+.step-icon-wrapper.icon-color-emerald .step-icon-svg svg,
+.step-icon-wrapper.icon-color-emerald .step-icon-svg svg * {
+    fill: rgba(16, 185, 129, 0.7) !important;
+    stroke: rgba(16, 185, 129, 0.6) !important;
+}
+
+.step-icon-wrapper.icon-color-fuchsia .step-icon-svg svg,
+.step-icon-wrapper.icon-color-fuchsia .step-icon-svg svg * {
+    fill: rgba(217, 70, 239, 0.7) !important;
+    stroke: rgba(217, 70, 239, 0.6) !important;
+}
+
+.step-icon-wrapper.icon-color-amber .step-icon-svg svg,
+.step-icon-wrapper.icon-color-amber .step-icon-svg svg * {
+    fill: rgba(245, 158, 11, 0.7) !important;
+    stroke: rgba(245, 158, 11, 0.6) !important;
+}
+
+.step-icon-wrapper.icon-color-green .step-icon-svg svg,
+.step-icon-wrapper.icon-color-green .step-icon-svg svg * {
+    fill: rgba(0, 140, 97, 0.7) !important;
+    stroke: rgba(0, 140, 97, 0.6) !important;
+}
+
+.step-icon-wrapper.icon-color-blue .step-icon-svg svg,
+.step-icon-wrapper.icon-color-blue .step-icon-svg svg * {
+    fill: rgba(37, 99, 235, 0.7) !important;
+    stroke: rgba(37, 99, 235, 0.6) !important;
+}
+
+.step-icon-wrapper.icon-color-purple .step-icon-svg svg,
+.step-icon-wrapper.icon-color-purple .step-icon-svg svg * {
+    fill: rgba(147, 51, 234, 0.7) !important;
+    stroke: rgba(147, 51, 234, 0.6) !important;
+}
+
+.step-icon-wrapper.icon-color-orange .step-icon-svg svg,
+.step-icon-wrapper.icon-color-orange .step-icon-svg svg * {
+    fill: rgba(234, 88, 12, 0.7) !important;
+    stroke: rgba(234, 88, 12, 0.6) !important;
+}
+
+.step-card:hover .step-icon-wrapper .step-icon-svg svg {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+/* Step Content */
+.step-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.step-title {
+    font-family: "PP Neue Montreal", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #003a51;
+    margin: 0 0 16px 0;
+    letter-spacing: -0.4px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.step-card:hover .step-title {
+    color: #008c61;
+}
+
+.step-description {
+    font-size: 17px;
+    line-height: 1.75;
+    color: #334e68;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    flex: 1;
+    font-weight: 400;
+}
+
+.step-description p {
+    margin: 0 0 12px 0;
+    line-height: 1.7;
+}
+
+.step-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* CTA */
+.steps-grid-cta {
+    text-align: center;
+    margin-top: 32px;
+}
+
+.steps-grid-cta .btn {
+    font-size: 18px;
+    padding: 14px 40px;
+    font-weight: 600;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .steps-grid-block {
+        padding: 60px 0;
+    }
+    
+    .steps-grid-title {
+        font-size: 36px;
+    }
+    
+    .steps-grid-description {
+        font-size: 16px;
+    }
+    
+    .steps-grid-block.columns-4 .steps-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .steps-grid-container {
+        gap: 24px;
+    }
+    
+    .step-card {
+        padding: 24px;
+    }
+    
+    .step-title {
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 991px) {
+    .steps-grid-block {
+        padding: 70px 0;
+    }
+    
+    .steps-grid-title {
+        font-size: 36px;
+    }
+    
+    .steps-grid-description {
+        font-size: 16px;
+    }
+    
+    .steps-grid-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .steps-grid-block {
+        padding: 60px 0;
+    }
+    
+    .steps-grid-header {
+        margin-bottom: 40px;
+    }
+    
+    .steps-grid-title {
+        font-size: 28px;
+    }
+    
+    .steps-grid-block.columns-2 .steps-grid-container,
+    .steps-grid-block.columns-3 .steps-grid-container,
+    .steps-grid-block.columns-4 .steps-grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .steps-grid-container {
+        gap: 24px;
+    }
+    
+    .step-card {
+        padding: 28px 24px;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        bottom: 16px;
+        right: 16px;
+    }
+    
+    .step-icon-wrapper {
+        width: 64px;
+        height: 64px;
+        bottom: 16px;
+        right: 16px;
+    }
+    
+    .step-icon-svg svg {
+        width: 64px;
+        height: 64px;
+        max-width: 64px;
+        max-height: 64px;
+    }
+    
+    .step-icon-img {
+        width: 64px;
+        height: 64px;
+        max-width: 64px;
+        max-height: 64px;
+    }
+    
+    .step-icon img,
+    .step-icon-placeholder {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .step-title {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    
+    .step-description {
+        font-size: 15px;
+    }
+}
+

@@ -1,0 +1,198 @@
+.news-press {
+  position: relative;
+  margin-top: 96px;
+  margin-bottom: 96px;
+
+  @media (max-width: 991.98px) {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  .content-area {
+    .title-area {
+      margin-bottom: 96px;
+
+      @media (max-width: 991.98px) {
+        margin-bottom: 32px;
+      }
+    }
+    .column-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 56px;
+      row-gap: 32px;
+      margin-bottom: 100px;
+
+      @media (max-width: 767.98px) {
+        margin-bottom: 32px;
+      }
+
+      .left-area {
+        flex: 0 0 calc((100% - 56px) / 2);
+        max-width: calc((100% - 56px) / 2);
+
+        @media (max-width: 991.98px) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+
+        .news-box {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+
+          .image-area {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            @media (max-width: 991.98px) {
+              height: 300px;
+            }
+            @media (max-width: 767.98px) {
+              height: 136px;
+            }
+
+            img {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              object-fit: cover;
+              object-position: center;
+            }
+          }
+          .text-area {
+            min-height: 186px;
+            padding: 48px;
+            background: #f7f8f8;
+
+            @media (max-width: 767.98px) {
+              min-height: unset;
+              padding: 24px;
+            }
+
+            h3 {
+              color: #003a51;
+              font-family: "PP Neue Montreal";
+              font-size: 27px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 129.63%;
+              margin-bottom: 8px;
+
+              @media (max-width: 767.98px) {
+                font-size: 22px;
+                line-height: 115%;
+                margin-bottom: 8px;
+              }
+            }
+            p {
+              color: #282828;
+              font-family: "PP Neue Montreal";
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 150%;
+              margin-bottom: 0;
+              width: 386px;
+              max-width: 100%;
+
+              @media (max-width: 767.98px) {
+                line-height: 135%;
+              }
+            }
+          }
+        }
+      }
+      .right-area {
+        flex: 0 0 calc((100% - 56px) / 2);
+        max-width: calc((100% - 56px) / 2);
+
+        @media (max-width: 991.98px) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+
+        .news-box {
+          position: relative;
+          display: flex;
+          margin-bottom: 24px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .image-area {
+            flex: 0 0 196px;
+            max-width: 196px;
+            min-height: 128px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            background: #f7f8f8;
+
+            @media (max-width: 767.98px) {
+              flex: 0 0 100px;
+              max-width: 100px;
+              min-height: 72px;
+              padding: 10px;
+            }
+
+            img {
+              max-width: 100%;
+              max-height: 100%;
+              object-fit: contain;
+              object-position: center;
+            }
+          }
+          .text-area {
+            flex: 0 0 calc(100% - 196px);
+            max-width: calc(100% - 196px);
+            padding-left: 23px;
+
+            @media (max-width: 767.98px) {
+              flex: 0 0 calc(100% - 100px);
+              max-width: calc(100% - 100px);
+              padding-left: 16px;
+            }
+
+            h3 {
+              color: #003a51;
+              font-family: "PP Neue Montreal";
+              font-size: 27px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 129.63%;
+              margin-bottom: 8px;
+
+              @media (max-width: 767.98px) {
+                font-size: 22px;
+                line-height: 115%;
+              }
+            }
+            p {
+              color: #282828;
+              font-family: "PP Neue Montreal";
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 150%;
+              margin-bottom: 0;
+
+              @media (max-width: 767.98px) {
+                line-height: 135%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .button-area {
+      text-align: center;
+    }
+  }
+}

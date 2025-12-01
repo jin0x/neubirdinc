@@ -1,0 +1,312 @@
+{
+    "key": "group_rolling_logos",
+    "title": "Block: Rolling Logos",
+    "fields": [
+        {
+            "key": "field_rolling_logos_title",
+            "label": "Section Title",
+            "name": "section_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional title for the logos section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Trusted by leading companies",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_rolling_logos_subtitle",
+            "label": "Section Subtitle",
+            "name": "section_subtitle",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Optional subtitle for the logos section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Join thousands of companies that trust our platform",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_rolling_logos_display_mode",
+            "label": "Logo Source",
+            "name": "display_mode",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose the source for the logos to display",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "integrations_all": "All Published Integrations",
+                "integrations_manual": "Manually Select Integrations",
+                "client_logos": "Manual Client Logos"
+            },
+            "default_value": "integrations_all",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_rolling_logos_manual_picker",
+            "label": "Select Integrations",
+            "name": "manual_picker",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Select specific integrations to display in the rolling logos",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_rolling_logos_display_mode",
+                        "operator": "==",
+                        "value": "integrations_manual"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "integrations"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "return_format": "id",
+            "min": 3,
+            "max": 40,
+            "elements": ""
+        },
+        {
+            "key": "field_rolling_logos_limit",
+            "label": "Number of Logos",
+            "name": "logos_limit",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Maximum number of logos to display (only applies when showing all integrations)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_rolling_logos_display_mode",
+                        "operator": "==",
+                        "value": "integrations_all"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 12,
+            "placeholder": "12",
+            "prepend": "",
+            "append": "",
+            "min": 3,
+            "max": 50,
+            "step": ""
+        },
+        {
+            "key": "field_rolling_logos_client_logos",
+            "label": "Client Logos",
+            "name": "client_logos",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add client logos manually from your media library",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_rolling_logos_display_mode",
+                        "operator": "==",
+                        "value": "client_logos"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 40,
+            "layout": "table",
+            "button_label": "Add Client Logo",
+            "sub_fields": [
+                {
+                    "key": "field_rolling_client_logo_name",
+                    "label": "Client Name",
+                    "name": "client_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Enter the client/company name",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Company Name",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_rolling_logos_client_logos"
+                },
+                {
+                    "key": "field_rolling_client_logo_image",
+                    "label": "Logo Image",
+                    "name": "client_logo_image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Upload the client logo. For best results, use transparent PNG files.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "png,jpg,jpeg,svg",
+                    "parent_repeater": "field_rolling_logos_client_logos"
+                },
+                {
+                    "key": "field_rolling_client_logo_url",
+                    "label": "Client URL (Optional)",
+                    "name": "client_url",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "Optional URL to link to the client's website",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "https://client-website.com",
+                    "parent_repeater": "field_rolling_logos_client_logos"
+                }
+            ]
+        },
+        {
+            "key": "field_rolling_logos_speed",
+            "label": "Animation Speed",
+            "name": "animation_speed",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose the scrolling speed for the logos",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "glacial": "Glacial (120s)",
+                "ultra-slow": "Ultra Slow (100s)",
+                "very-slow": "Very Slow (60s)",
+                "slow": "Slow (45s)",
+                "medium": "Medium (30s)",
+                "fast": "Fast (15s)",
+                "very-fast": "Very Fast (10s)"
+            },
+            "default_value": "medium",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_rolling_logos_background",
+            "label": "Background Style",
+            "name": "background_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose the background style for the logos section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "light": "Light Background",
+                "white": "White Background",
+                "transparent": "Transparent Background"
+            },
+            "default_value": "light",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/rolling-logos"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "A scrolling logos section displaying company logos with smooth horizontal animation",
+    "show_in_rest": 0,
+    "modified": 1736580639
+}

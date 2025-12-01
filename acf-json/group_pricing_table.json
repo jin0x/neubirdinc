@@ -1,0 +1,387 @@
+{
+    "key": "group_pricing_table",
+    "title": "Block: Pricing Table",
+    "fields": [
+        {
+            "key": "field_pricing_table_heading",
+            "label": "Section Heading",
+            "name": "heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Main heading for the pricing table section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Choose the plan that fits your operations",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_pricing_table_description",
+            "label": "Section Description",
+            "name": "description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Description text displayed below the heading",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Start free, pay per investigation as you grow, or partner with us for enterprise-wide resilience.",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_pricing_table_plans",
+            "label": "Pricing Plans",
+            "name": "plans",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add pricing plans (typically 2-3 plans)",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_plan_name",
+            "min": 1,
+            "max": 4,
+            "layout": "block",
+            "button_label": "Add Plan",
+            "sub_fields": [
+                {
+                    "key": "field_plan_name",
+                    "label": "Plan Name",
+                    "name": "plan_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Name of the pricing plan (e.g., Free Trial, Per Investigation, Enterprise)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "Free Trial",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_plan_description",
+                    "label": "Plan Description",
+                    "name": "plan_description",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Brief description of what this plan offers",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Explore NeuBird Hawkeye on your own systems.",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_plan_price",
+                    "label": "Price/Price Text",
+                    "name": "plan_price",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Price display text (e.g., \"$0 to get started\", \"$15 per investigation\", \"Let's Talk\")",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "$0 to get started",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_plan_best_for",
+                    "label": "Best For",
+                    "name": "plan_best_for",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Text describing who this plan is best for",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Perfect for teams evaluating Agentic AI SRE solutions.",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_plan_cta",
+                    "label": "CTA Button",
+                    "name": "plan_cta",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "Call-to-action button for this plan",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_plan_ideal_for",
+                    "label": "Ideal For",
+                    "name": "plan_ideal_for",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Text describing ideal use cases (e.g., Ideal for pilots, proofs of concept, and small teams validating incident workflows.)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Ideal for pilots, proofs of concept, and small teams validating incident workflows.",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_plan_bottom_description",
+                    "label": "Bottom Description",
+                    "name": "plan_bottom_description",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Description text displayed below this plan (e.g., Pricing is transparent and tied directly to the investigations NeuBird.ai manages.)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Pricing is transparent and tied directly to the investigations NeuBird.ai manages.",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_plan_badge",
+                    "label": "Badge Text",
+                    "name": "plan_badge",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Optional badge text to highlight this plan (e.g., \"JOIN 5,000+ COMPANIES\")",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "JOIN 5,000+ COMPANIES",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_plan_highlighted",
+                    "label": "Highlighted Plan",
+                    "name": "plan_highlighted",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Check to highlight this plan (e.g., with green border)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "Highlight this plan",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "Yes",
+                    "ui_off_text": "No"
+                },
+                {
+                    "key": "field_plan_features",
+                    "label": "Plan Features",
+                    "name": "plan_features",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "List of features included in this plan",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "field_feature_text",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add Feature",
+                    "sub_fields": [
+                        {
+                            "key": "field_feature_text",
+                            "label": "Feature",
+                            "name": "feature_text",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "Connect core monitoring & alerting tools",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_pricing_table_included_heading",
+            "label": "Included Section Heading",
+            "name": "included_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Heading for the \"Included in every plan\" section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Included in every plan",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_pricing_table_included_description",
+            "label": "Included Section Description",
+            "name": "included_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Description for the included features section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Whether you're running a small SRE team or a global operations center, every plan starts with the same core Hawkeye capabilities.",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_pricing_table_included_features",
+            "label": "Included Features",
+            "name": "included_features",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Features that are included in every plan",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Feature",
+            "sub_fields": [
+                {
+                    "key": "field_included_feature_text",
+                    "label": "Feature",
+                    "name": "feature_text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "Unified incident timeline and activity feed",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/pricing-table"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Field group for the Pricing Table block",
+    "show_in_rest": 0
+}
+

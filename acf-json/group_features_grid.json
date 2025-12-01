@@ -1,0 +1,128 @@
+{
+    "key": "group_features_grid",
+    "title": "Block: Features Grid",
+    "fields": [
+        {
+            "key": "field_awsfg_section_title",
+            "label": "Section Title",
+            "name": "section_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Main section heading",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "From chaos to clarity — automatically",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_awsfg_section_description",
+            "label": "Section Description",
+            "name": "section_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Introductory text for the features section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_awsfg_features",
+            "label": "Features",
+            "name": "features",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add feature items (typically 6 for a 3x2 grid)",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 1,
+            "max": 12,
+            "layout": "table",
+            "button_label": "Add Feature",
+            "collapsed": "field_awsfg_feature_title",
+            "sub_fields": [
+                {
+                    "key": "field_awsfg_feature_title",
+                    "label": "Feature Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Feature title/heading",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "Escape Alert Fatigue",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_awsfg_feature_description",
+                    "label": "Feature Description",
+                    "name": "description",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Feature description text",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "60",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "placeholder": "",
+                    "new_lines": "br"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/features-grid"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Grid layout displaying key features in a 3x2 format",
+    "show_in_rest": 0,
+    "modified": 1735689600
+}
+

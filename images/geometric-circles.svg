@@ -1,0 +1,30 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Large circles and semicircles -->
+  <circle cx="150" cy="150" r="120" stroke="#E0EEF2" stroke-width="2" fill="none"/>
+  <path d="M 450 30 A 120 120 0 0 1 570 150 A 120 120 0 0 1 450 270" stroke="#E0EEF2" stroke-width="2" fill="none"/>
+  <path d="M 30 450 A 120 120 0 0 1 150 330 A 120 120 0 0 1 270 450" stroke="#E0EEF2" stroke-width="2" fill="none"/>
+  <path d="M 450 330 A 120 120 0 0 1 570 450 A 120 120 0 0 1 450 570" stroke="#E0EEF2" stroke-width="2" fill="none"/>
+  
+  <!-- Medium circles with different opacities -->
+  <circle cx="300" cy="300" r="100" stroke="#E0EEF2" stroke-width="2" fill="none"/>
+  <circle cx="300" cy="100" r="80" stroke="#E0EEF2" stroke-width="2" fill="none"/>
+  <circle cx="300" cy="500" r="80" stroke="#E0EEF2" stroke-width="2" fill="#E0EEF2" fill-opacity="0.1"/>
+  <circle cx="100" cy="300" r="80" stroke="#E0EEF2" stroke-width="2" fill="none"/>
+  <circle cx="500" cy="300" r="80" stroke="#E0EEF2" stroke-width="2" fill="#E0EEF2" fill-opacity="0.05"/>
+  
+  <!-- Quarter circles -->
+  <path d="M 200 200 A 50 50 0 0 1 250 150 A 50 50 0 0 1 300 200" stroke="#E0EEF2" stroke-width="2" fill="none"/>
+  <path d="M 400 200 A 50 50 0 0 0 350 150 A 50 50 0 0 0 300 200" stroke="#E0EEF2" stroke-width="2" fill="none"/>
+  <path d="M 200 400 A 50 50 0 0 0 250 450 A 50 50 0 0 0 300 400" stroke="#E0EEF2" stroke-width="2" fill="none"/>
+  <path d="M 400 400 A 50 50 0 0 1 350 450 A 50 50 0 0 1 300 400" stroke="#E0EEF2" stroke-width="2" fill="none"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="150" cy="150" r="20" fill="#E0EEF2" fill-opacity="0.2"/>
+  <circle cx="450" cy="150" r="15" fill="#E0EEF2" fill-opacity="0.15"/>
+  <circle cx="150" cy="450" r="15" fill="#E0EEF2" fill-opacity="0.15"/>
+  <circle cx="450" cy="450" r="20" fill="#E0EEF2" fill-opacity="0.2"/>
+  
+  <!-- Intersecting circles -->
+  <circle cx="350" cy="250" r="40" stroke="#E0EEF2" stroke-width="1.5" fill="none"/>
+  <circle cx="380" cy="280" r="40" stroke="#E0EEF2" stroke-width="1.5" fill="none"/>
+</svg>

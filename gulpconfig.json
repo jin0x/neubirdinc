@@ -1,0 +1,16 @@
+{
+  "browserSyncOptions": {
+    "proxy": "127.0.0.1/neubird",
+    "notify": false
+  },
+  "browserSyncWatchFiles": ["./assets/css/*.min.css", "./assets/js/*.min.js"],
+  "paths": {
+    "js": "./assets/js",
+    "css": "./assets/css",
+    "sass": "./src/sass",
+    "node": "./node_modules/",
+    "dev": "./src",
+    "dist": "./assets",
+    "vendor": ""
+  }
+}

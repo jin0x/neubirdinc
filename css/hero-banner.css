@@ -1,0 +1,867 @@
+/* Hero Banner Styles */
+
+/* Hide Lottie animation on mobile devices */
+@media (max-width: 767px) {
+  .hero-banner .background-area.with_lottie,
+  .hero-banner .background-area.with_lottie *,
+  .hero-banner .background-area[class*="lottie"],
+  .hero-banner .background-area[class*="lottie"] *,
+  .hero-banner .lottie-player,
+  .hero-banner [data-lottie-player],
+  .hero-banner iframe[src*="lottie"],
+  .lottie-mobile-hide,
+  .lottie-mobile-hide *,
+  .lottie-wrapper,
+  .lottie-wrapper *,
+  [data-mobile-hide="true"],
+  [data-mobile-hide="true"] * {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    position: absolute !important;
+    pointer-events: none !important;
+    max-height: 0 !important;
+    max-width: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    border: 0 !important;
+  }
+  
+  /* Additional fix to hide any lottie animations */
+  lottie-player,
+  dotlottie-player,
+  .lottie-player,
+  .dotlottie-player {
+    display: none !important;
+  }
+}
+
+/* Animated Text Styles */
+.banner-text-animated {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* Flip Animation Styles */
+.flip-container {
+  display: inline-block;
+  position: relative;
+  min-width: 150px;
+  text-align: left;
+  perspective: 1000px;
+  margin-left: 4px;
+}
+
+.flip-text {
+  display: inline-block;
+  position: relative;
+  color: #728E9D;
+  font-weight: bold;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.flip-text.flip-out {
+  transform: rotateX(-90deg);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+@media (max-width: 767.98px) {
+  .flip-container {
+    min-width: 120px;
+    display: inline;
+  }
+  
+  .flip-text {
+    display: inline;
+  }
+}
+
+/* Typing text container */
+.banner-text-animated .typing-text {
+  display: inline;
+  position: relative;
+}
+
+/* Cursor for typing animation */
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background-color: #333;
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 0.7s infinite;
+}
+
+/* Last word styling */
+.banner-text-animated .last-word {
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+}
+
+/* Strikethrough animation class - added via JS */
+.strikethrough {
+  position: relative;
+  display: inline-block;
+  /* Direct method as fallback */
+  text-decoration: line-through;
+  text-decoration-color: #ff5757;
+  text-decoration-thickness: 2px;
+  transition: width 0.8s ease-in-out;
+}
+
+/* The actual strikethrough line */
+.strikethrough-line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0%; /* Start at 0 width */
+  height: 3px;
+  background-color: #ff5757;
+  transition: width 0.8s ease-in-out;
+  z-index: 5;
+  pointer-events: none; /* Make sure it doesn't interfere with text selection */
+}
+
+/* When active, expand to full width */
+.strikethrough-line.active {
+  width: 100%;
+}
+
+/* Banner text animation styles */
+.banner-text-animated {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  text-align: left;
+}
+
+@media (max-width: 767.98px) {
+  .banner-text-animated {
+    font-size: 1.2rem !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    word-wrap: break-word;
+  }
+  
+  .banner-text-animated br {
+    display: none;
+  }
+  
+  .flip-container {
+    display: block !important;
+    width: 100% !important;
+    min-width: auto !important;
+    margin-top: 0.5rem;
+  }
+  
+  .typing-container {
+    display: block !important;
+    width: 100% !important;
+  }
+}
+
+/* Typing container */
+.typing-container {
+  display: inline-block;
+}
+
+/* Main text styling */
+.main-text {
+  display: inline;
+}
+
+/* Space styling */
+.space {
+  display: inline;
+  letter-spacing: -1px;
+  margin-left: -1px;
+}
+
+/* Last word styling */
+.last-word {
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  margin-left: 0.1em;
+}
+
+/* Strikethrough animation */
+.last-word.strikethrough::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 40%; /* Lower position to better show the text */
+  width: 0;
+  height: 4px;
+  /* More squiggly wave pattern */
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='12' viewBox='0 0 60 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6C5 1 10 11 15 6C20 1 25 11 30 6C35 1 40 11 45 6C50 1 55 11 60 6' stroke='%23ff5757' stroke-width='2.5'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-size: 60px 12px;
+  pointer-events: none;
+  animation: strikethrough 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards; /* Smoother easing */
+  z-index: 10;
+}
+
+/* Ensure the last word is always visible */
+#last-word, .last-word, .last-word.strikethrough {
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: inline-block !important;
+}
+
+@keyframes strikethrough {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Smoother animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Ensure the typing cursor blinks properly */
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background-color: #333;
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 0.7s infinite;
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.strikethrough {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hero-banner {
+  background-color: #FFFFFF;
+  min-height: 700px;
+  overflow: hidden;
+  position: relative;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  left: 0;
+  right: 0;
+}
+
+/* Dynamic Banner Heights */
+.hero-banner.height-xsmall {
+  min-height: 400px;
+}
+
+.hero-banner.height-smaller {
+  min-height: 500px;
+}
+
+.hero-banner.height-small {
+  min-height: 600px;
+}
+
+.hero-banner.height-medium {
+  min-height: 700px;
+}
+
+.hero-banner.height-large {
+  min-height: 800px;
+}
+
+.hero-banner.height-xlarge {
+  min-height: 900px;
+}
+
+.hero-banner.height-auto {
+  min-height: auto;
+  padding-bottom: 80px;
+}
+
+.hero-banner .container {
+  height: 100%;
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.hero-banner .content-area {
+  padding: 80px 0;
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  min-height: 100%;
+  z-index: 20 !important;
+  display: flex;
+  align-items: center;
+}
+
+.hero-banner.height-auto .content-area {
+  min-height: auto;
+  padding: 80px 0 60px;
+}
+
+.hero-banner.layout-text_with_side_image .content-area {
+  width: 100%;
+  padding-left: 60px;
+}
+
+.hero-banner .content-wrapper {
+  width: 100%;
+}
+
+.hero-banner .content-wrapper.full-width-content {
+  max-width: 1276px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.hero-banner .content-wrapper.side-image-content {
+  width: 100%;
+}
+
+.hero-banner .banner-text-content {
+  width: 100%;
+  z-index: 15;
+  position: relative;
+}
+
+.hero-banner.layout-text_with_side_image .content-area {
+  width: 100%;
+}
+
+/* Base styles for all background areas */
+.hero-banner .background-area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/* Specific styling for integrations page lottie */
+body.page-integrations .hero-banner.layout-text_with_side_image .background-area,
+.hero-banner.layout-text_with_side_image.with_lottie .background-area {
+  max-width: 1228px;
+  left: 54%;
+  width: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* Specific styling for playground page */
+.page-id-1169 .hero-banner .background-area {
+  width: 100%;
+  max-width: 100%;
+  left: 0;
+  transform: none;
+}
+
+/* Playground page gradient overlay */
+.page-id-1169 .hero-banner {
+  position: relative;
+}
+
+.page-id-1169 .hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(247, 248, 248, 0.85) 0%, rgba(247, 248, 248, 0.75) 25%, rgba(247, 248, 248, 0.6) 50%, rgba(247, 248, 248, 0.4) 75%, rgba(247, 248, 248, 0.2) 90%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-banner .background-area .image-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-banner .background-area img.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+  display: block;
+  min-width: 100vw;
+}
+
+.hero-banner .background-area lottie-player {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 45%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-banner .banner-image-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hero-banner .banner-image-container .image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-banner .banner-image-container img.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+}
+
+/* Base lottie wrapper styles */
+.hero-banner .banner-image-container .lottie-wrapper {
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  width: 80% !important;
+  height: 100% !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  overflow: hidden !important;
+}
+
+.hero-banner .banner-image-container .lottie-wrapper lottie-player {
+  width: 85% !important;
+  height: 85% !important;
+}
+
+.hero-banner .banner-image-container lottie-player {
+  width: 85% !important;
+  height: 85% !important;
+  position: relative !important;
+  max-width: 100% !important;
+  margin-right: 5% !important;
+}
+
+/* Banner content wrapper for flexible layouts */
+.hero-banner .banner-content-wrapper {
+  display: flex;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  align-items: center;
+  max-width: 100%;
+}
+
+/* Layout styles */
+.hero-banner.layout-text_over_image .banner-content-wrapper {
+  flex-direction: column;
+  padding-top: 60px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.hero-banner.layout-text_with_side_image .banner-content-wrapper {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0;
+  position: relative;
+  z-index: 2;
+  width: 50%;
+}
+
+/* Text content styles */
+.hero-banner .banner-text-content {
+  z-index: 15 !important;
+  max-width: 100%;
+  padding: 0 24px;
+  position: relative !important;
+  width: 100%;
+}
+
+.hero-banner.layout-text_over_image .banner-text-content {
+  width: 100%;
+  margin-bottom: 10px; /* Minimal spacing between elements as per user preference */
+  position: relative !important;
+  z-index: 15 !important;
+}
+
+.hero-banner.layout-text_with_side_image .banner-text-content {
+  width: 50%;
+  padding-left: 0;
+  position: relative !important;
+  z-index: 15 !important;
+}
+
+.hero-banner .pretitle {
+  color: #003a51;
+  font-family: "PP Neue Montreal";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.hero-banner .gradient-text {
+  color: #003a51;
+  font-family: "PP Neue Montreal";
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 77px;
+  margin-bottom: 24px;
+  width: 800px;
+  max-width: 100%;
+  display: block;
+}
+
+.hero-banner .banner-text {
+  color: #003a51;
+  font-family: "PP Neue Montreal";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+  max-width: 700px;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+  z-index: 11;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.hero-banner p.banner-text,
+.hero-banner .banner-text-fallback {
+  color: #003a51;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+  z-index: 12;
+  font-family: "PP Neue Montreal";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 700px;
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+.hero-banner .gradient-text {
+  position: relative;
+  z-index: 11;
+  color: #003a51;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.hero-banner .pretitle {
+  position: relative;
+  z-index: 11;
+  color: #003a51;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.hero-banner .btn_area {
+  position: relative;
+  z-index: 11;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.hero-banner .btn_area {
+  margin-top: 30px;
+}
+
+.hero-banner .btn.btn-primary {
+  background-color: #FF7F5C;
+  border-color: #FF7F5C;
+  border-radius: 30px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.hero-banner .btn.btn-secondary-alt {
+  margin-left: 15px;
+  border: 1px solid #003A4C;
+  color: #003A4C;
+  background: transparent;
+  border-radius: 30px;
+  padding: 11px 25px;
+  font-size: 16px;
+}
+
+/* Image container styles for side image layout */
+.hero-banner.layout-text_with_side_image .banner-image-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%; 
+  height: 100%;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  max-width: none;
+  background-color: transparent;
+}
+
+.hero-banner.layout-text_with_side_image .banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center right;
+  display: block;
+  margin: 0;
+  padding: 0;
+  transform-origin: center;
+}
+
+/* Iframe styles if needed */
+.hero-banner .banner-iframe-wrapper {
+  width: 100%;
+  margin-top: 10px;
+  z-index: 1;
+}
+
+.hero-banner .banner-iframe-wrapper iframe {
+  width: 100%;
+  height: 400px;
+}
+
+/* Large screen styles */
+@media (min-width: 1400px) {
+
+  .hero-banner .container {
+    max-width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-banner .content-area {
+    max-width: 1276px;
+  }
+
+  .hero-banner .content-wrapper.full-width-content {
+    max-width: 1276px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .hero-banner.layout-text_with_side_image .banner-content-wrapper {
+    width: 45%;
+  }
+
+  .hero-banner.layout-text_with_side_image .banner-text-content {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .hero-banner .banner-text-content {
+    padding-left: 0;
+  }
+
+  .hero-banner.layout-text_with_side_image .banner-image-container {
+    width: 60%;
+  }
+}
+
+/* Extra large screen styles */
+@media (min-width: 1920px) {
+  .hero-banner .container,
+  .hero-banner .content-area,
+  .hero-banner .content-wrapper.full-width-content {
+    /* max-width: 1920px; */
+    padding-left: 20px !important;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 991.98px) {
+  .hero-banner .content-area {
+    padding: 40px 20px;
+  }
+  
+  .hero-banner .gradient-text {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-banner {
+    height: auto;
+    min-height: 0;
+  }
+  
+  .hero-banner .content-area {
+    padding: 30px 15px;
+  }
+  
+  .hero-banner .gradient-text {
+    font-size: 32px !important;
+    line-height: 1.3 !important;
+  }
+  
+  .hero-banner .banner-text {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+  
+  .hero-banner .pretitle {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+  }
+  
+  .hero-banner .btn_area {
+    margin-top: 20px;
+  }
+  
+  .hero-banner .btn {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .hero-banner .btn.btn-secondary-alt {
+    margin-left: 0;
+  }
+  
+  .hero-banner .banner-text-content {
+    max-width: 100%;
+    padding: 20px 0;
+  }
+  
+  /* Hide lottie animations on mobile */
+  .hero-banner .banner-image-container .lottie-wrapper,
+  .hero-banner .background-area lottie-player {
+    display: none !important;
+  }
+  
+  .hero-banner .banner-content-wrapper {
+    padding-top: 30px;
+    flex-direction: column;
+  }
+  
+  .hero-banner.layout-text_with_side_image .banner-content-wrapper {
+    flex-direction: column;
+  }
+  
+  .hero-banner.layout-text_with_side_image .banner-text-content {
+    width: 100%;
+  }
+  
+  /* Image to the right - hide on mobile since it's not good */
+  .hero-banner.layout-text_with_side_image .banner-image-container {
+    display: inline-flex;
+    width: 100%;
+  }
+  
+    .hero-banner.layout-text_with_side_image .content-area {
+    width: 100%;
+    padding: 40px 20px;
+  }
+  
+  .hero-banner.layout-text_with_side_image .content-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-banner.layout-text_with_side_image .content-area {
+    padding-left: 0;
+  }
+  
+  /* Image at the bottom - good on mobile */
+  .hero-banner.layout-text_with_bottom_image .banner-image-container {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    order: 2;
+    height: 55vh; /* Make the image container fill the height */
+    overflow: hidden;
+  }
+  
+  .hero-banner.layout-text_with_bottom_image .banner-image-container .image-wrapper {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .hero-banner.layout-text_with_bottom_image .banner-image-container img.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .hero-banner.layout-text_with_bottom_image .content-area {
+    order: 1;
+  }
+}

@@ -1,0 +1,182 @@
+{
+    "key": "group_pricing_hero",
+    "title": "Block: Pricing Hero",
+    "fields": [
+        {
+            "key": "field_pricing_hero_heading",
+            "label": "Heading",
+            "name": "heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Main heading for the pricing hero section",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Pricing that follows your investigations",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_pricing_hero_subheading",
+            "label": "Subheading",
+            "name": "subheading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Subheading text displayed below the main heading",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Agentic AI SRE pricing built for Engineering and DevOps teams.",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_pricing_hero_description",
+            "label": "Description",
+            "name": "description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Introductory text or description for the pricing section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Start with a free trial, then only pay when the investigations actually happen...",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_pricing_hero_badge_1",
+            "label": "Badge 1",
+            "name": "badge_1",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "First badge text (e.g., Get up and running in minutes)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Get up and running in minutes",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_pricing_hero_badge_2",
+            "label": "Badge 2",
+            "name": "badge_2",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Second badge text (e.g., Designed for product-grade workloads)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Designed for product-grade workloads",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_pricing_hero_button_1",
+            "label": "Button 1",
+            "name": "button_1",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "First call-to-action button (e.g., Start free trial)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_pricing_hero_button_2",
+            "label": "Button 2",
+            "name": "button_2",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Second call-to-action button (e.g., Compare Plans)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_pricing_hero_background_image",
+            "label": "Background Image",
+            "name": "background_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Optional background image for the hero section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/pricing-hero"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Field group for the Pricing Hero block",
+    "show_in_rest": 0
+}
+

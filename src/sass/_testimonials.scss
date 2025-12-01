@@ -1,0 +1,203 @@
+.testimonials {
+  position: relative;
+  margin-top: 150px;
+
+  @media (max-width: 767.98px) {
+    margin-top: 80px;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: calc(100% - 171px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #f7f8f8;
+
+    @media (max-width: 991.98px) {
+      height: 100%;
+    }
+  }
+
+  .content-area {
+    position: relative;
+    width: 1440px;
+    padding: 0;
+
+    .testimonial-container {
+      .testimonial-box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+
+        &.active {
+          position: relative;
+          opacity: 1;
+          pointer-events: all;
+        }
+
+        .image-area {
+          flex: 0 0 488px;
+          max-width: 488px;
+          height: 732px;
+          position: relative;
+
+          @media (max-width: 991.98px) {
+            flex: 0 0 300px;
+            max-width: 300px;
+            height: 500px;
+            z-index: -1;
+          }
+
+          @media (max-width: 767.98px) {
+            position: absolute;
+            width: 212px;
+            height: 315px;
+            bottom: 0;
+            right: 0;
+          }
+
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: contain;
+            object-position: center bottom;
+          }
+        }
+        .text-area {
+          flex: 0 0 calc(100% - 488px);
+          max-width: calc(100% - 488px);
+          padding-left: 32px;
+          padding-bottom: 80px;
+
+          @media (max-width: 991.98px) {
+            flex: 0 0 calc(100% - 324px);
+            max-width: calc(100% - 324px);
+          }
+          @media (max-width: 767.98px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-top: 80px;
+            padding-bottom: 216px;
+            padding-left: 24px;
+            padding-right: 24px;
+          }
+
+          .logo-area {
+            margin-bottom: 24px;
+
+            @media (max-width: 767.98px) {
+              margin-bottom: 16px;
+            }
+            img {
+              height: 60px;
+              object-fit: contain;
+
+              @media (max-width: 767.98px) {
+                height: 32px;
+              }
+            }
+          }
+          .testimonial {
+            color: #43505c;
+            font-family: "Iowan Old Style";
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 153.846%;
+            width: 660px;
+            max-width: 100%;
+            margin-bottom: 40px;
+
+            @media (max-width: 991.98px) {
+              font-size: 20px;
+              margin-bottom: 20px;
+            }
+            @media (max-width: 767.98px) {
+              line-height: 145%;
+              margin-bottom: 16px;
+            }
+          }
+          .testi-meta {
+            p {
+              color: #282828;
+              font-family: "PP Neue Montreal";
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 26px;
+
+              @media (max-width: 767.98px) {
+                font-size: 16px;
+                line-height: 135%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .testimonial-toggle {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      column-gap: 40px;
+      padding: 0 56px;
+      background: #fff;
+
+      @media (max-width: 767.98px) {
+        column-gap: 24px;
+        padding: 0 16px;
+      }
+
+      a {
+        color: #aeaeae;
+        font-family: "PP Neue Montreal";
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 166.667%;
+        height: 64px;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 767.98px) {
+          font-size: 14px;
+          line-height: normal;
+          height: 40px;
+        }
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 8px;
+          background-color: #f3755f;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          opacity: 0;
+          transition: all 0.35s;
+
+          @media (max-width: 767.98px) {
+            height: 6px;
+          }
+        }
+
+        &.active {
+          &::before {
+            opacity: 1;
+            transition: all 0.35s;
+          }
+        }
+      }
+    }
+  }
+}

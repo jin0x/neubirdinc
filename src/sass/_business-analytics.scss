@@ -1,0 +1,164 @@
+.business-analytics {
+  position: relative;
+  background: #003a51;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  overflow: hidden;
+
+  @media (max-width: 767.98px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .content-area {
+    .top-title-text {
+      width: 600px;
+      max-width: 100%;
+      margin-bottom: 120px;
+
+      @media (max-width: 767.98px) {
+        margin-bottom: 96px;
+      }
+
+      h2 {
+        color: #fff;
+        font-size: 65px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 68px;
+        letter-spacing: -1.95px;
+        margin-bottom: 24px;
+
+        @media (max-width: 767.98px) {
+          font-family: "PP Neue Montreal";
+          font-size: 28px;
+          line-height: 115%;
+          margin-bottom: 8px;
+          letter-spacing: 0;
+        }
+      }
+      p {
+        color: #fff;
+      }
+    }
+    .four-column-highlight {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 56px;
+      row-gap: 32px;
+      margin-bottom: 85px;
+
+      @media (max-width: 767.98px) {
+        column-gap: 32px;
+        margin-bottom: 96px;
+      }
+
+      .column-box {
+        flex: 0 0 calc((100% - 168px) / 4);
+        max-width: calc((100% - 168px) / 4);
+
+        @media (max-width: 767.98px) {
+          flex: 0 0 calc((100% - 64px) / 2);
+          max-width: calc((100% - 64px) / 2);
+        }
+
+        h3 {
+          margin-bottom: 0;
+          color: #f3755f;
+          font-family: "Iowan Old Style";
+          font-size: 80px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 1;
+
+          @media (max-width: 991.98px) {
+            font-size: 48px;
+          }
+        }
+      }
+    }
+
+    .four-column-timeline {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 56px;
+      row-gap: 16px;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 100vw;
+        height: 1px;
+        background-color: #fff;
+        position: absolute;
+        top: 126px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media (max-width: 767.98px) {
+          width: 1px;
+          height: 500vh;
+          top: 0;
+          left: 22px;
+          transform: none;
+        }
+      }
+
+      .column-box {
+        flex: 0 0 calc((100% - 168px) / 4);
+        max-width: calc((100% - 168px) / 4);
+        position: relative;
+
+        @media (max-width: 767.98px) {
+          flex: 0 0 100%;
+          max-width: 100%;
+          padding-left: 69px;
+        }
+
+        &::before {
+          content: "";
+          width: 44px;
+          height: 44px;
+          background-color: #f3755f;
+          border-radius: 50%;
+          position: absolute;
+          top: 105px;
+          left: 0;
+
+          @media (max-width: 767.98px) {
+            top: 0;
+          }
+        }
+
+        h3 {
+          color: #fff;
+          font-family: "PP Neue Montreal";
+          font-size: 21px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 28px;
+          margin-bottom: 92px;
+          height: 84px;
+          display: flex;
+          align-items: flex-end;
+
+          @media (max-width: 767.98px) {
+            height: unset;
+            font-size: 20px;
+            line-height: 115%;
+            margin-bottom: 8px;
+          }
+        }
+        p {
+          color: #fff;
+          width: 200px;
+          max-width: 100%;
+
+          @media (max-width: 767.98px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

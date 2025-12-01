@@ -1,0 +1,397 @@
+{
+    "key": "group_feature_list",
+    "title": "Block: Feature List",
+    "fields": [
+        {
+            "key": "field_fl_main_title",
+            "label": "Main Title",
+            "name": "main_title",
+            "type": "text",
+            "instructions": "Main heading (e.g., 'Deploy on AWS in Minutes')",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Deploy on AWS in Minutes",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_fl_main_title_badge",
+            "label": "Title Badge",
+            "name": "main_title_badge",
+            "type": "text",
+            "instructions": "Badge text next to main title (e.g., 'FREE TRIAL')",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "FREE TRIAL",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_fl_badges",
+            "label": "Feature Badges",
+            "name": "badges",
+            "type": "repeater",
+            "instructions": "Add feature badges/tags (e.g., 'FASTER MTTR', 'HIGHER SRE PRODUCTIVITY')",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Badge",
+            "sub_fields": [
+                {
+                    "key": "field_fl_badge_text",
+                    "label": "Badge Text",
+                    "name": "badge_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "FASTER MTTR",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_fl_section_title",
+            "label": "Section Title",
+            "name": "section_title",
+            "type": "text",
+            "instructions": "Sub-section heading (e.g., 'What you get with Hawkeye on AWS')",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "What you get with Hawkeye on AWS",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_fl_items",
+            "label": "Feature Items",
+            "name": "items",
+            "type": "repeater",
+            "instructions": "Add feature items to display in the list",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "min": 1,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Item",
+            "sub_fields": [
+                {
+                    "key": "field_fl_item_text",
+                    "label": "Item Text",
+                    "name": "item_text",
+                    "type": "textarea",
+                    "instructions": "Text content for this feature item",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": "br"
+                }
+            ]
+        },
+        {
+            "key": "field_fl_show_attribution",
+            "label": "Show Attribution",
+            "name": "show_attribution",
+            "type": "true_false",
+            "instructions": "Display the 'Powered by' attribution section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Show Powered By section",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_fl_attribution_prefix",
+            "label": "Attribution Prefix Text",
+            "name": "attribution_prefix",
+            "type": "text",
+            "instructions": "Text before the logo (e.g., 'Powered by')",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fl_show_attribution",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Powered by",
+            "placeholder": "Powered by",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_fl_attribution_logo",
+            "label": "Attribution Logo",
+            "name": "attribution_logo",
+            "type": "image",
+            "instructions": "Logo image for attribution (e.g., NeuBird logo)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fl_show_attribution",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_fl_attribution_text",
+            "label": "Attribution Text",
+            "name": "attribution_text",
+            "type": "text",
+            "instructions": "Text after the logo (e.g., 'NeuBird's Generative AI engine')",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fl_show_attribution",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "NeuBird's Generative AI engine",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_fl_layout_style",
+            "label": "Layout Style",
+            "name": "layout_style",
+            "type": "select",
+            "instructions": "Choose how the content should be displayed",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "simple": "Simple List",
+                "boxed": "Boxed Items",
+                "highlighted": "Highlighted with Accent",
+                "with_media": "List with Video/Lottie on Left"
+            },
+            "default_value": "simple",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fl_use_lottie",
+            "label": "Use Lottie Animation",
+            "name": "use_lottie",
+            "type": "true_false",
+            "instructions": "Toggle to use Lottie animation instead of video",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fl_layout_style",
+                        "operator": "==",
+                        "value": "with_media"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "Use Lottie",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_fl_lottie_file",
+            "label": "Lottie Animation File",
+            "name": "lottie_file",
+            "type": "file",
+            "instructions": "Upload a Lottie JSON animation file",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fl_layout_style",
+                        "operator": "==",
+                        "value": "with_media"
+                    },
+                    {
+                        "field": "field_fl_use_lottie",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "json"
+        },
+        {
+            "key": "field_fl_video_url",
+            "label": "Video URL",
+            "name": "video_url",
+            "type": "url",
+            "instructions": "Video URL (YouTube, Vimeo, etc.) - will be embedded",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fl_layout_style",
+                        "operator": "==",
+                        "value": "with_media"
+                    },
+                    {
+                        "field": "field_fl_use_lottie",
+                        "operator": "==",
+                        "value": "0"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https://www.youtube.com/watch?v=..."
+        },
+        {
+            "key": "field_fl_cta_button",
+            "label": "CTA Button",
+            "name": "cta_button",
+            "type": "link",
+            "instructions": "Add a call-to-action button at the bottom (e.g., FREE TRIAL button)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/feature-list"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "A flexible block for displaying feature lists with optional attribution section",
+    "show_in_rest": 0
+}
+

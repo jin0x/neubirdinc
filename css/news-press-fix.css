@@ -1,0 +1,312 @@
+/* News Press Styles - Based on Blog Archive */
+
+.news-press * {
+  box-sizing: border-box;
+  max-width: 100vw;
+}
+
+.news-press.blog-archive {
+  padding: 60px 0;
+  background-color: #f5f8fa;
+  width: 100%;
+}
+
+.news-press.blog-archive .content-area {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.news-press.blog-archive .title-area {
+  margin-bottom: 40px;
+}
+
+.news-press.blog-archive .title-area h2 {
+  font-size: 42px;
+  color: #003545;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Featured Posts Grid Layout */
+.news-press.blog-archive .featured-posts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+  height: auto;
+  margin-bottom: 50px;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .news-press.blog-archive .featured-posts-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Featured Post Large (Left Column) */
+.news-press.blog-archive .featured-posts-left {
+  height: 100%;
+  display: flex;
+}
+
+/* Featured Posts Small (Right Column) */
+.news-press.blog-archive .featured-posts-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+  justify-content: space-between;
+}
+
+/* Ensure all cards in the right column have equal height */
+.news-press.blog-archive .featured-posts-right .featured-post-small {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Featured Post Large (Left Column) */
+.news-press.blog-archive .featured-post-large .featured-post-inner {
+  background-color: #fff;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 4px solid #003a51;
+  width: 100%;
+}
+
+.news-press.blog-archive .featured-post-large .featured-image {
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+}
+
+.news-press.blog-archive .featured-post-large .featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.news-press.blog-archive .featured-post-large .featured-post-inner:hover .featured-image img {
+  transform: scale(1.05);
+}
+
+.news-press.blog-archive .featured-post-large .featured-image:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);
+  pointer-events: none;
+}
+
+.news-press.blog-archive .featured-post-large .featured-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-press.blog-archive .featured-post-large .category-tag {
+  display: inline-block;
+  padding: 5px 0;
+  color: #003a51;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.news-press.blog-archive .featured-post-large .article-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  color: #003545;
+}
+
+.news-press.blog-archive .featured-post-large .article-excerpt {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+/* Small Featured Posts (Right Column) */
+.news-press.blog-archive .featured-posts-right .featured-post-small {
+  background-color: #fff;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 4px solid #003a51;
+  position: relative;
+  flex: 1;
+}
+
+/* Different heights based on excerpt presence */
+.news-press.blog-archive .featured-posts-right .featured-post-small.has-excerpt {
+  min-height: 230px; /* Taller for posts with excerpts */
+}
+
+.news-press.blog-archive .featured-posts-right .featured-post-small.no-excerpt {
+  min-height: 150px; /* Shorter for posts without excerpts */
+}
+
+/* Ensure all cards have the same height */
+.news-press.blog-archive .featured-post-small {
+  height: 100%;
+}
+
+.news-press.blog-archive .featured-posts-right .featured-content {
+  padding: 18px;
+  padding-bottom: 0; /* Remove bottom padding completely */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start; /* Align content at the top */
+}
+
+.news-press.blog-archive .featured-posts-right .category-tag {
+  display: inline-block;
+  padding: 4px 0;
+  color: #003a51;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.news-press.blog-archive .featured-posts-right .article-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.3;
+  color: #003545;
+  flex-shrink: 0; /* Prevent title from shrinking */
+}
+
+.news-press.blog-archive .featured-posts-right .article-excerpt {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6c757d;
+  margin-bottom: 15px;
+  flex: 1 0 auto; /* Allow excerpt to grow but not shrink */
+}
+
+/* Different excerpt styles based on content */
+.has-excerpt .article-excerpt {
+  min-height: 40px; /* Space for excerpt text */
+  margin-bottom: 5px; /* Consistent margin for all cards */
+}
+
+.no-excerpt .article-excerpt {
+  min-height: 0;
+  margin-bottom: 5px; /* Less space when no excerpt */
+}
+
+/* Read More Button */
+.news-press.blog-archive .read-more {
+  margin-top: auto; /* Push to bottom */
+  padding-top: 15px;
+  padding-bottom: 10px; /* Add bottom padding to prevent touching border */
+}
+
+/* Ensure consistent padding for all cards */
+.news-press.blog-archive .featured-post-small .read-more {
+  padding-bottom: 18px;
+}
+
+.news-press.blog-archive .has-excerpt .read-more {
+  padding-bottom: 18px;
+}
+
+.news-press.blog-archive .btn-text {
+  display: inline-block;
+  color: #003a51;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 5px 0; /* Add padding to prevent crushing */
+  margin-top: 5px; /* Add margin to ensure proper spacing */
+  text-decoration: none;
+  position: relative;
+  padding-right: 20px;
+}
+
+.news-press.blog-archive .btn-text:after {
+  content: '\2192';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.news-press.blog-archive .btn-text:hover:after {
+  transform: translate(5px, -50%);
+}
+
+/* Button Area */
+.news-press.blog-archive .button-area {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.news-press.blog-archive .btn-primary {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #00945e;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.news-press.blog-archive .btn-primary:hover {
+  background-color: #007a4d;
+}
+
+/* Stretched Link */
+.news-press.blog-archive .stretched-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: auto;
+  content: "";
+  background-color: rgba(0,0,0,0);
+}
+
+.news-press.blog-archive .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

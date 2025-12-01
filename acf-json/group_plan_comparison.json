@@ -1,0 +1,245 @@
+{
+    "key": "group_plan_comparison",
+    "title": "Block: Plan Comparison",
+    "fields": [
+        {
+            "key": "field_plan_comparison_heading",
+            "label": "Section Heading",
+            "name": "heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Main heading for the plan comparison section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Plan comparison",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_plan_comparison_description",
+            "label": "Section Description",
+            "name": "description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Description text displayed below the heading",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "All NeuBird.ai pricing starts with an investigation-centric approach",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_plan_comparison_plan_names",
+            "label": "Plan Column Names",
+            "name": "plan_names",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Names for the plan columns in the comparison table",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_plan_name_1",
+                    "label": "Plan 1 Name",
+                    "name": "plan_1",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Free Trial",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_plan_name_2",
+                    "label": "Plan 2 Name",
+                    "name": "plan_2",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Per investigation",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_plan_name_3",
+                    "label": "Plan 3 Name",
+                    "name": "plan_3",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Enterprise",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        },
+        {
+            "key": "field_plan_comparison_rows",
+            "label": "Comparison Rows",
+            "name": "comparison_rows",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add rows to compare capabilities across plans",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_capability_name",
+            "min": 1,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Comparison Row",
+            "sub_fields": [
+                {
+                    "key": "field_capability_name",
+                    "label": "Capability",
+                    "name": "capability_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Name of the capability or feature",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "Agentic AI assistant",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_plan_1_value",
+                    "label": "Plan 1 Value",
+                    "name": "plan_1_value",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Value for Plan 1 (e.g., Yes, Basic, -, or custom text)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "Yes",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_plan_2_value",
+                    "label": "Plan 2 Value",
+                    "name": "plan_2_value",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Value for Plan 2 (e.g., Yes, Basic, -, or custom text)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "Yes",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_plan_3_value",
+                    "label": "Plan 3 Value",
+                    "name": "plan_3_value",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Value for Plan 3 (e.g., Yes, Basic, -, or custom text)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "Yes",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/plan-comparison"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Field group for the Plan Comparison block",
+    "show_in_rest": 0
+}
+

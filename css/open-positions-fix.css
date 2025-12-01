@@ -1,0 +1,77 @@
+/* Open Positions Bullet Points Fix */
+/* High specificity CSS to ensure bullet points show */
+
+/* Reset and force list styles with solid bullets (like Google Docs) */
+.careers.open_postion .content-area .open-positions .accordion .accordion-item .accordion-collapse .accordion-body .text-box ul {
+    list-style-type: disc !important;
+    list-style: disc !important;
+    padding-left: 30px !important;
+    margin: 16px 0 !important;
+    counter-reset: none !important;
+}
+
+.careers.open_postion .content-area .open-positions .accordion .accordion-item .accordion-collapse .accordion-body .text-box ul li {
+    display: list-item !important;
+    list-style-type: disc !important;
+    list-style: disc !important;
+    list-style-position: outside !important;
+    margin-left: 0 !important;
+    margin-bottom: 8px !important;
+    padding-left: 0 !important;
+    position: relative !important;
+    counter-increment: none !important;
+    color: #000 !important;
+}
+
+/* Remove pseudo-element bullets since native bullets are working */
+.careers.open_postion .content-area .open-positions .accordion .accordion-item .accordion-collapse .accordion-body .text-box ul li::before {
+    content: none !important;
+}
+
+.careers.open_postion .content-area .open-positions .accordion .accordion-item .accordion-collapse .accordion-body .text-box ul li::marker {
+    content: "• " !important;
+    color: #003A51 !important;
+    font-size: inherit !important;
+}
+
+/* Ordered lists */
+.careers.open_postion .content-area .open-positions .accordion .accordion-item .accordion-collapse .accordion-body .text-box ol {
+    list-style-type: decimal !important;
+    list-style: decimal !important;
+    padding-left: 30px !important;
+    margin: 16px 0 !important;
+    counter-reset: list-counter !important;
+}
+
+.careers.open_postion .content-area .open-positions .accordion .accordion-item .accordion-collapse .accordion-body .text-box ol li {
+    display: list-item !important;
+    list-style-type: decimal !important;
+    list-style: decimal !important;
+    list-style-position: outside !important;
+    margin-left: 0 !important;
+    margin-bottom: 8px !important;
+    padding-left: 0 !important;
+    counter-increment: list-counter !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 767.98px) {
+    .careers.open_postion .content-area .open-positions .accordion .accordion-item .accordion-collapse .accordion-body .text-box ul,
+    .careers.open_postion .content-area .open-positions .accordion .accordion-item .accordion-collapse .accordion-body .text-box ol {
+        padding-left: 25px !important;
+    }
+    
+    .careers.open_postion .content-area .open-positions .accordion .accordion-item .accordion-collapse .accordion-body .text-box ul li::before {
+        left: -18px !important;
+    }
+}
+
+/* Override any theme resets */
+.careers.open_postion ul, .careers.open_postion ol {
+    list-style: revert !important;
+}
+
+.careers.open_postion ul li, .careers.open_postion ol li {
+    list-style: inherit !important;
+    display: list-item !important;
+}

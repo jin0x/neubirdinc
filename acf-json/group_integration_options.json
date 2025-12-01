@@ -1,0 +1,258 @@
+{
+    "key": "group_integration_options",
+    "title": "Block: Integration Options",
+    "fields": [
+        {
+            "key": "field_io_section_title",
+            "label": "Section Title",
+            "name": "section_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Main heading for the integration options section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Integration options",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_io_section_subtitle",
+            "label": "Section Subtitle",
+            "name": "section_subtitle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Subtitle or tagline below the main title",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Get started in minutes, not weeks.",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_io_column_headers",
+            "label": "Column Headers",
+            "name": "column_headers",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Headers for the three columns in the comparison table",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_io_col_option",
+                    "label": "Option Column Header",
+                    "name": "col_option",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Option",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_io_col_what",
+                    "label": "What it does Column Header",
+                    "name": "col_what",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "What it does",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_io_col_when",
+                    "label": "When to use Column Header",
+                    "name": "col_when",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "When to use",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        },
+        {
+            "key": "field_io_options",
+            "label": "Integration Options",
+            "name": "options",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add integration option rows (typically 3 options)",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_io_option_name",
+            "min": 1,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Option",
+            "sub_fields": [
+                {
+                    "key": "field_io_option_name",
+                    "label": "Option Name",
+                    "name": "option_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Name of the integration option (e.g., AWS Marketplace Deployment)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "AWS Marketplace Deployment",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_io_what_it_does",
+                    "label": "What it does",
+                    "name": "what_it_does",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Description of what this option does",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "placeholder": "",
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_io_when_to_use",
+                    "label": "When to use",
+                    "name": "when_to_use",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Description of when to use this option",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "placeholder": "",
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_io_cta_button",
+                    "label": "CTA Button",
+                    "name": "cta_button",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "Optional call-to-action button for this option",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "field_io_global_cta",
+            "label": "Global CTA Button",
+            "name": "global_cta",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Optional CTA button displayed below the table (e.g., FREE TRIAL)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/integration-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Field group for the Integration Options block - displays a 3-column comparison table",
+    "show_in_rest": 0,
+    "modified": 1735689600
+}
+

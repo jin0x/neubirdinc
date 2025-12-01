@@ -1,0 +1,400 @@
+{
+    "key": "group_hero_banner_new",
+    "title": "Block: Hero Banner",
+    "fields": [
+        {
+            "key": "field_hero_pretitle",
+            "label": "Pretitle",
+            "name": "bn_pretitle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_hero_title",
+            "label": "Title",
+            "name": "bn_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "You can use HTML tags for gradient text: <span class=\"blue\">blue</span>, <span class=\"purple\">purple</span>, <span class=\"orange\">orange</span>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_hero_text",
+            "label": "Text",
+            "name": "bn_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 5,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_hero_button",
+            "label": "Button 1",
+            "name": "bn_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_hero_button_2",
+            "label": "Button 2",
+            "name": "bn_button_2",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_hero_layout",
+            "label": "Layout Style",
+            "name": "bn_layout_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose the layout style for the hero banner",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "text_over_image": "Text Over Image",
+                "text_with_side_image": "Text with Side Image",
+                "text_with_bottom_image": "Text with Bottom Image"
+            },
+            "default_value": "text_over_image",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_hero_text_alignment",
+            "label": "Text Alignment",
+            "name": "bn_text_alignment",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose the text alignment for the hero banner",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left": "Left",
+                "center": "Center"
+            },
+            "default_value": "left",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_hero_banner_image",
+            "label": "Banner Image",
+            "name": "bn_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "For 'Text Over Image' layout, this will be used as a background. For 'Text with Side Image' layout, this will appear next to the text.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_hero_show_desktop",
+            "label": "Show Desktop Only",
+            "name": "bn_show_desktop",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Show this banner only on desktop devices",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "Yes",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_hero_animate_text",
+            "label": "Animate Text",
+            "name": "bn_animate_text",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Enable text flip animation for the last part of the text",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "Yes",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_hero_base_text",
+            "label": "Base Text",
+            "name": "bn_base_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "The fixed part of the text (e.g. 'Reclaim hours lost to')",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_hero_animate_text",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Enter the fixed part of the text",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_hero_flip_texts",
+            "label": "Flip Text Options",
+            "name": "bn_flip_texts",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add text options to flip through at the end of the base text",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_hero_animate_text",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 1,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Flip Text Option",
+            "sub_fields": [
+                {
+                    "key": "field_hero_flip_text",
+                    "label": "Text",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "Enter a text option (e.g. 'alert fatigue')",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        },
+        {
+            "key": "field_hero_iframe_url",
+            "label": "iFrame URL",
+            "name": "bn_iframe_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Optional: Add an iframe URL to embed content",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_hero_lottie",
+            "label": "Lottie Animation",
+            "name": "bn_lottie",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "Upload a Lottie JSON animation file",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "json"
+        },
+        {
+            "key": "field_hero_lottieimage",
+            "label": "Use Lottie",
+            "name": "bn_lottieimage",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Toggle to use Lottie animation instead of static image",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "Yes",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_hero_banner_height",
+            "label": "Banner Height",
+            "name": "bn_banner_height",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose the height of the hero banner section",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "xsmall": "Extra Small (400px)",
+                "smaller": "Small (500px)",
+                "small": "Small (600px)",
+                "medium": "Medium (700px)",
+                "large": "Large (800px)",
+                "xlarge": "Extra Large (900px)",
+                "auto": "Auto (Content-based)"
+            },
+            "default_value": "medium",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/hero-banner"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1745496465
+}

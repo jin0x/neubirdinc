@@ -1,0 +1,49 @@
+{
+    "key": "group_featured_post",
+    "title": "Featured Post Settings",
+    "fields": [
+        {
+            "key": "field_featured_post",
+            "label": "Featured Post",
+            "name": "featured_post",
+            "type": "true_false",
+            "instructions": "Check this box to mark this post as featured. Featured posts will appear in the Featured Articles section at the top of the blog page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "blog"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Settings for featured posts on the blog page"
+}

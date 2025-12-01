@@ -1,0 +1,65 @@
+{
+    "key": "group_news_and_press_archive",
+    "title": "News and Press Archive Settings",
+    "fields": [
+        {
+            "key": "field_news_archive_posts_per_page",
+            "label": "Posts Per Page",
+            "name": "posts_per_page",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Enter the number of posts to display per page (default: 6)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 6,
+            "placeholder": "6",
+            "prepend": "",
+            "append": "",
+            "min": 3,
+            "max": 24,
+            "step": 3
+        },
+        {
+            "key": "field_news_archive_show_pagination",
+            "label": "Show Pagination",
+            "name": "show_pagination",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Enable pagination navigation",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/news-and-press"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Simple pagination settings for the News and Press Archive block"
+}
