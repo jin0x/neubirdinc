@@ -443,7 +443,7 @@ body .careers .content-area .open-positions .accordion .accordion-item .accordio
 .home-banner.reduce_padding .content-area {
     padding-bottom: 100px;
     padding-top: 95px;
-} 
+}
 
 
 @media (max-width: 767.98px) {
@@ -714,7 +714,7 @@ section.blog_content .content-area .bottom_area .right_area .written-area .singl
     letter-spacing: normal;
     display: block;
     color: #003A51;
-    margin-bottom: 8px; 
+    margin-bottom: 8px;
 }
 
 section.blog_content .content-area .bottom_area .right_area .written-area .single_written .text_area p {
@@ -1458,15 +1458,15 @@ body .news-press-archive .filter_area .select-items div:hover {
 }
 
 
-section.blog_content .content-area .bottom_area .left_area .right_content p a, 
+section.blog_content .content-area .bottom_area .left_area .right_content p a,
 section.blog_content .content-area .bottom_area .left_area .right_content li a {
     color: #008C61;
     transition: all .35s;
     border-bottom: 1px solid transparent;
 
-} 
+}
 
-section.blog_content .content-area .bottom_area .left_area .right_content p a:hover, 
+section.blog_content .content-area .bottom_area .left_area .right_content p a:hover,
 section.blog_content .content-area .bottom_area .left_area .right_content li a:hover {
     border-bottom: 1px solid #008C61;
 }
@@ -1527,7 +1527,7 @@ section.blog_content .content-area .bottom_area .left_area .right_content li a:h
     .let-ai-do-work.cta_version .content-area .text-area a.btn {
         width: 243px;
         padding: 16px 9px;
-    } 
+    }
 }
 
 section.image_video_w_text {
@@ -1545,7 +1545,7 @@ section.image_video_w_text .content-area {
 section.image_video_w_text .content-area .media_area {
     width: 100%;
     max-width: 45.53%;
-    position: relative;  
+    position: relative;
 }
 
 section.image_video_w_text .content-area .media_area .img_wrap {
@@ -1979,7 +1979,7 @@ body .fancybox-container .fancybox-slide.fancybox-slide--video .fancybox-content
     }
 
     .wyswig_new .content-area p:last-child {
-        margin-bottom: 0;  
+        margin-bottom: 0;
 
     }
 
@@ -1996,8 +1996,8 @@ body .fancybox-container .fancybox-slide.fancybox-slide--video .fancybox-content
     .integration_ready .content-area .item_wrapper .item_single .logo_wrapper {
         border-top: 4px solid #008C61;
         padding-top: 24px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 0;
+        padding-right: 0;
         row-gap: 16px;
         column-gap: 16px;
     }
@@ -2429,8 +2429,8 @@ body.single-integrations section.more_from_blog .content-area .title_area h2 {
 
     body.single-integrations section.more_from_blog .content-area .title_area h2 {
         font-size: 28px;
-        line-height: 115%; 
-        margin-bottom: 32px; 
+        line-height: 115%;
+        margin-bottom: 32px;
     }
 
     .let-ai-do-work.cta_version.cta_integrations {
@@ -2465,7 +2465,7 @@ body.single-integrations section.more_from_blog .content-area .title_area h2 {
         display: flex !important;
         flex-direction: column;
     }
-    
+
     header .content-area .navbar .container-fluid .navbar-collapse.show .navbar-nav {
         flex: 1;
         height: auto !important;
@@ -2475,7 +2475,7 @@ body.single-integrations section.more_from_blog .content-area .title_area h2 {
         width: 100%;
         align-items: flex-start;
     }
-    
+
     header .content-area .navbar .container-fluid .navbar-collapse.show .mobile-menu-footer {
         opacity: 1 !important;
         transition: all 0s;
@@ -2483,7 +2483,7 @@ body.single-integrations section.more_from_blog .content-area .title_area h2 {
         padding-bottom: 24px;
         flex-shrink: 0;
     }
-    
+
     /* Ensure menu items are visible and properly spaced */
     header .content-area .navbar .container-fluid .navbar-collapse.show .navbar-nav .nav-item {
         display: block !important;
@@ -2492,7 +2492,7 @@ body.single-integrations section.more_from_blog .content-area .title_area h2 {
         visibility: visible;
         margin-left: 0;
     }
-    
+
     header .content-area .navbar .container-fluid .navbar-collapse.show .navbar-nav .nav-item .nav-link {
         display: block !important;
         color: #003a51 !important;
@@ -2501,40 +2501,40 @@ body.single-integrations section.more_from_blog .content-area .title_area h2 {
         letter-spacing: 0;
         padding: 8px 0 !important;
     }
-    
+
     /* Ensure mobile menu footer social and copyright are visible */
     header .content-area .navbar .container-fluid .navbar-collapse.show .mobile-menu-footer .social-menu {
         margin-bottom: 24px;
     }
-    
+
     header .content-area .navbar .container-fluid .navbar-collapse.show .mobile-menu-footer .social-menu a {
         display: inline-flex;
         margin-right: 24px;
     }
-    
+
     header .content-area .navbar .container-fluid .navbar-collapse.show .mobile-menu-footer .social-menu a img {
         height: 16px;
         filter: brightness(0) saturate(100%) invert(16%) sepia(49%) saturate(1654%) hue-rotate(164deg) brightness(98%) contrast(101%);
     }
-    
+
     header .content-area .navbar .container-fluid .navbar-collapse.show .mobile-menu-footer .menu-copyright {
         margin-top: 24px;
         padding-top: 24px;
         border-top: 1px solid #003a51;
     }
-    
+
     header .content-area .navbar .container-fluid .navbar-collapse.show .mobile-menu-footer .menu-copyright p {
         color: #003a51;
         font-size: 14px;
         line-height: 24px;
         margin-bottom: 0;
     }
-    
+
     /* Fix navbar collapse default state */
     header .content-area .navbar .container-fluid .navbar-collapse:not(.show) {
         display: none !important;
     }
-    
+
     /* Ensure proper z-index for mobile menu */
     header.active {
         z-index: 9999 !important;
@@ -2560,7 +2560,7 @@ body.single-integrations section.more_from_blog .content-area .title_area h2 {
         padding: 0 24px !important;
         z-index: 999 !important;
     }
-    
+
     body header .content-area .navbar .container-fluid .navbar-collapse.collapse.show .navbar-nav {
         display: flex !important;
         flex-direction: column !important;
@@ -2571,7 +2571,7 @@ body.single-integrations section.more_from_blog .content-area .title_area h2 {
         overflow: visible !important;
         flex: 1 !important;
     }
-    
+
     body header .content-area .navbar .container-fluid .navbar-collapse.collapse.show .navbar-nav .nav-item {
         display: block !important;
         width: 100% !important;
@@ -2580,7 +2580,7 @@ body.single-integrations section.more_from_blog .content-area .title_area h2 {
         opacity: 1 !important;
         visibility: visible !important;
     }
-    
+
     body header .content-area .navbar .container-fluid .navbar-collapse.collapse.show .navbar-nav .nav-item .nav-link {
         display: block !important;
         color: #003a51 !important;
@@ -2592,7 +2592,7 @@ body.single-integrations section.more_from_blog .content-area .title_area h2 {
         padding: 8px 0 !important;
         text-decoration: none !important;
     }
-    
+
     /* Fix Book a demo button text color to white */
     body header .content-area .navbar .container-fluid .navbar-collapse.collapse.show .navbar-nav .nav-item .nav-link.menu-button {
         color: #fff !important;
@@ -2605,7 +2605,7 @@ body.single-integrations section.more_from_blog .content-area .title_area h2 {
         min-width: 175px !important;
         margin-top: 8px !important;
     }
-    
+
     body header .content-area .navbar .container-fluid .navbar-collapse.collapse.show .mobile-menu-footer {
         display: block !important;
         opacity: 1 !important;
@@ -2614,24 +2614,24 @@ body.single-integrations section.more_from_blog .content-area .title_area h2 {
         padding-bottom: 24px !important;
         flex-shrink: 0 !important;
     }
-    
+
     body header .content-area .navbar .container-fluid .navbar-collapse.collapse.show .mobile-menu-footer .social-menu {
         display: block !important;
         margin-bottom: 24px !important;
     }
-    
+
     body header .content-area .navbar .container-fluid .navbar-collapse.collapse.show .mobile-menu-footer .social-menu a {
         display: inline-flex !important;
         margin-right: 24px !important;
     }
-    
+
     body header .content-area .navbar .container-fluid .navbar-collapse.collapse.show .mobile-menu-footer .menu-copyright {
         display: block !important;
         margin-top: 24px !important;
         padding-top: 24px !important;
         border-top: 1px solid #003a51 !important;
     }
-    
+
     body header .content-area .navbar .container-fluid .navbar-collapse.collapse.show .mobile-menu-footer .menu-copyright p {
         display: block !important;
         color: #003a51 !important;
@@ -2919,7 +2919,7 @@ body.single-integrations section.more_from_blog .content-area .title_area h2 {
     align-items: flex-start;
     gap: 12px;
   }
-  
+
   footer .content-area .footer-copyright p span.separator {
     display: none;
   }
@@ -2994,7 +2994,7 @@ body.single-integrations section.more_from_blog .content-area .title_area h2 {
     .hero-banner .banner-image-container {
         width: 58% !important;
     }
-    
+
     /* Adjust image focus to show more of the left side */
     .hero-banner .banner-image-container img.banner-image {
         object-position: 30% center !important;
@@ -3005,7 +3005,7 @@ body.single-integrations section.more_from_blog .content-area .title_area h2 {
     .hero-banner.layout-text_with_side_image .banner-text-content {
         width: 40% !important;
     }
-    
+
     .hero-banner .banner-image-container {
         width: 60% !important;
     }

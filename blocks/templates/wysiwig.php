@@ -33,7 +33,7 @@ if ($text):
         default:
             $bg_class = 'bg-transparent';
     }
-    
+
     // Map padding values to CSS classes
     $padding_class = '';
     switch ($vertical_padding) {
@@ -55,21 +55,21 @@ if ($text):
         default:
             $padding_class = 'padding-medium';
     }
-    
+
     // Map max width values
     $max_width_value = $max_width === 'full' ? '100%' : $max_width;
-    
+
     // Add image class if image exists
     $has_image_class = $image ? 'has-image image-' . $image_position : '';
-?>
+    ?>
 <section id="<?php echo esc_attr($id); ?>" class="wysiwig-block <?php echo esc_attr($bg_class); ?> <?php echo esc_attr($padding_class); ?> <?php echo esc_attr($has_image_class); ?>">
     <div class="wysiwig-container" style="max-width: <?php echo esc_attr($max_width_value); ?>;">
         <div class="wysiwig-inner-wrapper">
             <div class="wysiwig-content wysiwig-align-<?php echo esc_attr($content_alignment); ?>">
                 <?php echo wp_kses_post($text); ?>
             </div>
-            
-            <?php if($image): ?>
+
+            <?php if ($image): ?>
             <div class="wysiwig-image">
                 <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="img-fluid">
             </div>
