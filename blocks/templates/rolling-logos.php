@@ -90,7 +90,7 @@ if (!empty($integration_posts) || !empty($display_client_logos)):
     ?>
 
 <section class="rolling-logos-block <?php echo esc_attr($bg_class); ?>" id="<?php echo esc_attr($id); ?>">
-    <div class="container">
+    <div class="content-area">
         <div class="logos-wrapper <?php echo ($section_title || $section_subtitle) ? 'has-header' : ''; ?>">
             <?php if ($section_title || $section_subtitle): ?>
             <div class="logos-header" data-aos="fade-up">
@@ -257,7 +257,7 @@ endif;
         right: 0;
         top: 50%;
         transform: translateY(-50%);
-        width: 1px;
+        width: 2px;
         height: 60px;
         background: black;
     }

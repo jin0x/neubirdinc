@@ -21,7 +21,6 @@
 
 /* Header section */
 .rolling-logos-block .logos-header {
-  margin-bottom: 40px;
 }
 
 .rolling-logos-block .logos-title {
@@ -30,7 +29,6 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
-  margin-bottom: 24px;
   text-align: center;
 }
 
@@ -169,10 +167,6 @@
 @media (max-width: 991.98px) {
   .rolling-logos-block {
     padding: 50px 0;
-  }
-
-  .rolling-logos-block .logos-header {
-    margin-bottom: 30px;
   }
 
   .rolling-logos-block .logos-title {
