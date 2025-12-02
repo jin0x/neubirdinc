@@ -39,19 +39,27 @@ jQuery(document).ready(function($) {
 
         // Force correct widths after Slick initialization
         setTimeout(function() {
-            var containerWidth = $('.testimonial-slider').width();
+            var containerWidth = $('.testimonial-slider').parent().width();
+            var totalSlides = $('.testimonial-slider .slick-slide').length; // includes clones
+
+            console.log('Testimonial Slider Debug:');
+            console.log('Container width:', containerWidth);
+            console.log('Total slides:', totalSlides);
+            console.log('Track width should be:', containerWidth * totalSlides);
+
             $('.testimonial-slider .slick-list').css({
                 'width': containerWidth + 'px',
                 'max-width': '100%'
             });
             $('.testimonial-slider .slick-track').css({
-                'width': containerWidth + 'px',
-                'max-width': '100%'
+                'width': (containerWidth * totalSlides) + 'px'
             });
             $('.testimonial-slider .slick-slide').css({
-                'width': containerWidth + 'px',
-                'max-width': '100%'
+                'width': containerWidth + 'px'
             });
+
+            console.log('After setting - slick-list width:', $('.testimonial-slider .slick-list').css('width'));
+            console.log('After setting - slick-track width:', $('.testimonial-slider .slick-track').css('width'));
         }, 50);
 
         // Create pagination dots

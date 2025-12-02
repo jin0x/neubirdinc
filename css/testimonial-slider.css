@@ -75,22 +75,17 @@
 
 /* Force Slick slider containers to respect viewport */
 .testimonials .content-area .testimonial-slider .slick-list {
-  width: 100% !important;
-  max-width: 100% !important;
   overflow: hidden !important;
 }
 
 .testimonials .content-area .testimonial-slider .slick-track {
-  width: 100% !important;
-  max-width: 100% !important;
+  /* Track width is controlled by JavaScript - don't use !important */
 }
 
 /* Force slides to stay within bounds */
 .testimonials .content-area .testimonial-slider .testimonial-slide,
 .testimonials .content-area .testimonial-slider .slick-slide {
   outline: none;
-  width: 100% !important;
-  max-width: 100% !important;
   box-sizing: border-box !important;
 }
 
