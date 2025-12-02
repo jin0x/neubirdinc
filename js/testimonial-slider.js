@@ -36,10 +36,27 @@ jQuery(document).ready(function($) {
         
         // Initialize slider
         $('.testimonial-slider').slick(config);
-        
+
+        // Force correct widths after Slick initialization
+        setTimeout(function() {
+            var containerWidth = $('.testimonial-slider').width();
+            $('.testimonial-slider .slick-list').css({
+                'width': containerWidth + 'px',
+                'max-width': '100%'
+            });
+            $('.testimonial-slider .slick-track').css({
+                'width': containerWidth + 'px',
+                'max-width': '100%'
+            });
+            $('.testimonial-slider .slick-slide').css({
+                'width': containerWidth + 'px',
+                'max-width': '100%'
+            });
+        }, 50);
+
         // Create pagination dots
         createPagination();
-        
+
         // Add slide change event handler
         $('.testimonial-slider').on('afterChange', function(event, slick, currentSlide) {
             updateActiveDot(currentSlide);
