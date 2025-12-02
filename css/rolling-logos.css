@@ -1,279 +1,301 @@
 /* Rolling Logos Block Styles */
 
 .rolling-logos-block {
-    padding: 60px 0;
-    overflow: hidden;
-    position: relative;
+  padding: 60px 0;
+  overflow: hidden;
+  position: relative;
 }
 
 /* Background styles */
 .rolling-logos-block.bg-light {
-    background-color: #F7F8F8;
+  background-color: #f7f8f8;
 }
 
 .rolling-logos-block.bg-white {
-    background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .rolling-logos-block.bg-transparent {
-    background: transparent;
+  background: transparent;
 }
 
 /* Header section */
 .rolling-logos-block .logos-header {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .rolling-logos-block .logos-title {
-    color: #003A51;
-    font-family: "PP Neue Montreal", sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 32px;
-    margin-bottom: 24px;
-    text-align: center;
+  color: #003a51;
+  font-family: "PP Neue Montreal", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 24px;
+  text-align: center;
 }
 
 .rolling-logos-block .logos-subtitle {
-    color: #003A51;
-    font-family: "PP Neue Montreal", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 0;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
+  color: #003a51;
+  font-family: "PP Neue Montreal", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Desktop layout - text aligned left when side-by-side */
+@media (min-width: 768px) {
+  .rolling-logos-block .logos-wrapper.has-header .logos-title,
+  .rolling-logos-block .logos-wrapper.has-header .logos-subtitle {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 /* Logos container */
 .rolling-logos-block .logos-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
 }
 
 /* Logos track - Anime.js controlled */
 .rolling-logos-block .logos-track {
-    display: flex;
-    width: fit-content;
-    /* Remove CSS animation - Anime.js will handle smoothly */
-    transform: translateX(-100%);
-    will-change: transform;
+  display: flex;
+  width: fit-content;
+  /* Remove CSS animation - Anime.js will handle smoothly */
+  transform: translateX(-100%);
+  will-change: transform;
 }
 
 /* Animation speeds */
 .rolling-logos-block .logos-track.speed-very-slow {
-    animation-duration: 80s;
+  animation-duration: 80s;
 }
 
 .rolling-logos-block .logos-track.speed-slow {
-    animation-duration: 60s;
+  animation-duration: 60s;
 }
 
 .rolling-logos-block .logos-track.speed-medium {
-    animation-duration: 40s;
+  animation-duration: 40s;
 }
 
 .rolling-logos-block .logos-track.speed-fast {
-    animation-duration: 20s;
+  animation-duration: 20s;
 }
 
 .rolling-logos-block .logos-track.speed-very-fast {
-    animation-duration: 10s;
+  animation-duration: 10s;
 }
 
 /* Logos set - each contains all logos */
 .rolling-logos-block .logos-set {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-shrink: 0;
 }
 
 /* Individual logo item */
 .rolling-logos-block .logo-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80px;
-    min-width: 120px;
-    max-width: 200px;
-    flex-shrink: 0;
-    padding: 0 10px;
-    /* Prevent layout shifts during image loading */
-    overflow: hidden;
-    /* Use contain to optimize rendering */
-    contain: layout style paint;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  min-width: 120px;
+  max-width: 200px;
+  flex-shrink: 0;
+  padding: 0 10px;
+  /* Prevent layout shifts during image loading */
+  overflow: hidden;
+  /* Use contain to optimize rendering */
+  contain: layout style paint;
 }
 
 /* Logo image styles */
 .rolling-logos-block .logo-image {
-    max-height: 60px;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    transition: all 0.3s ease;
-    display: block;
+  max-height: 60px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  display: block;
 }
 
 /* Hover effect */
 .rolling-logos-block .logo-item:hover .logo-image {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* Pause animation on hover */
 .rolling-logos-block:hover .logos-track {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 /* Remove CSS animation - Anime.js will handle this */
 
 /* Responsive styles */
 @media (max-width: 1200px) {
-    .rolling-logos-block .logos-set {
-        gap: 50px;
-    }
-    
-    .rolling-logos-block .logo-item {
-        min-width: 100px;
-        max-width: 180px;
-    }
+  .rolling-logos-block .logos-set {
+    gap: 50px;
+  }
+
+  .rolling-logos-block .logo-item {
+    min-width: 100px;
+    max-width: 180px;
+  }
 }
 
 @media (max-width: 991.98px) {
-    .rolling-logos-block {
-        padding: 50px 0;
-    }
-    
-    .rolling-logos-block .logos-header {
-        margin-bottom: 30px;
-    }
-    
-    .rolling-logos-block .logos-title {
-        font-size: 20px;
-        line-height: 28px;
-    }
-    
-    .rolling-logos-block .logos-subtitle {
-        font-size: 16px;
-    }
-    
-    .rolling-logos-block .logos-set {
-        gap: 40px;
-    }
-    
-    .rolling-logos-block .logo-item {
-        height: 70px;
-        min-width: 90px;
-        max-width: 160px;
-    }
-    
-    .rolling-logos-block .logo-image {
-        max-height: 50px;
-    }
+  .rolling-logos-block {
+    padding: 50px 0;
+  }
+
+  .rolling-logos-block .logos-header {
+    margin-bottom: 30px;
+  }
+
+  .rolling-logos-block .logos-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .rolling-logos-block .logos-subtitle {
+    font-size: 16px;
+  }
+
+  .rolling-logos-block .logos-set {
+    gap: 40px;
+  }
+
+  .rolling-logos-block .logo-item {
+    height: 70px;
+    min-width: 90px;
+    max-width: 160px;
+  }
+
+  .rolling-logos-block .logo-image {
+    max-height: 50px;
+  }
 }
 
 @media (max-width: 767.98px) {
-    .rolling-logos-block {
-        padding: 40px 0;
-    }
-    
-    .rolling-logos-block .logos-title {
-        font-size: 24px;
-    }
-    
-    .rolling-logos-block .logos-subtitle {
-        font-size: 14px;
-    }
-    
-    .rolling-logos-block .logos-set {
-        gap: 30px;
-    }
-    
-    .rolling-logos-block .logo-item {
-        height: 60px;
-        min-width: 80px;
-        max-width: 140px;
-        padding: 0 5px;
-    }
-    
-    .rolling-logos-block .logo-image {
-        max-height: 40px;
-    }
-    
-    /* Faster animation on mobile for better UX */
-    .rolling-logos-block .logos-track.speed-very-slow {
-        animation-duration: 60s;
-    }
-    
-    .rolling-logos-block .logos-track.speed-slow {
-        animation-duration: 45s;
-    }
-    
-    .rolling-logos-block .logos-track.speed-medium {
-        animation-duration: 30s;
-    }
-    
-    .rolling-logos-block .logos-track.speed-fast {
-        animation-duration: 15s;
-    }
-    
-    .rolling-logos-block .logos-track.speed-very-fast {
-        animation-duration: 8s;
-    }
+  .rolling-logos-block {
+    padding: 40px 0;
+  }
+
+  .rolling-logos-block .logos-title {
+    font-size: 24px;
+  }
+
+  .rolling-logos-block .logos-subtitle {
+    font-size: 14px;
+  }
+
+  .rolling-logos-block .logos-set {
+    gap: 30px;
+  }
+
+  .rolling-logos-block .logo-item {
+    height: 60px;
+    min-width: 80px;
+    max-width: 140px;
+    padding: 0 5px;
+  }
+
+  .rolling-logos-block .logo-image {
+    max-height: 40px;
+  }
+
+  /* Faster animation on mobile for better UX */
+  .rolling-logos-block .logos-track.speed-very-slow {
+    animation-duration: 60s;
+  }
+
+  .rolling-logos-block .logos-track.speed-slow {
+    animation-duration: 45s;
+  }
+
+  .rolling-logos-block .logos-track.speed-medium {
+    animation-duration: 30s;
+  }
+
+  .rolling-logos-block .logos-track.speed-fast {
+    animation-duration: 15s;
+  }
+
+  .rolling-logos-block .logos-track.speed-very-fast {
+    animation-duration: 8s;
+  }
 }
 
 @media (max-width: 575.98px) {
-    .rolling-logos-block .logos-set {
-        gap: 25px;
-    }
-    
-    .rolling-logos-block .logo-item {
-        height: 50px;
-        min-width: 70px;
-        max-width: 120px;
-    }
-    
-    .rolling-logos-block .logo-image {
-        max-height: 35px;
-    }
+  .rolling-logos-block .logos-set {
+    gap: 25px;
+  }
+
+  .rolling-logos-block .logo-item {
+    height: 50px;
+    min-width: 70px;
+    max-width: 120px;
+  }
+
+  .rolling-logos-block .logo-image {
+    max-height: 35px;
+  }
 }
 
 /* Accessibility - Respect prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
-    .rolling-logos-block .logos-track {
-        animation: none;
-    }
-    
-    .rolling-logos-block .logos-container {
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-    }
-    
-    .rolling-logos-block .logos-container::-webkit-scrollbar {
-        display: none;
-    }
-    
-    .rolling-logos-block .logos-track {
-        justify-content: flex-start;
-        padding: 0 20px;
-    }
+  .rolling-logos-block .logos-track {
+    animation: none;
+  }
+
+  .rolling-logos-block .logos-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .rolling-logos-block .logos-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .rolling-logos-block .logos-track {
+    justify-content: flex-start;
+    padding: 0 20px;
+  }
 }
 
 /* Dark theme support (if needed) */
 @media (prefers-color-scheme: dark) {
-    .rolling-logos-block.bg-light {
-        background-color: #1a1a1a;
-    }
-    
-    .rolling-logos-block.bg-white {
-        background-color: #2a2a2a;
-    }
+  .rolling-logos-block.bg-light {
+    background-color: #1a1a1a;
+  }
+
+  .rolling-logos-block.bg-white {
+    background-color: #2a2a2a;
+  }
 }

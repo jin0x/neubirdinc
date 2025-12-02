@@ -91,20 +91,21 @@ if (!empty($integration_posts) || !empty($display_client_logos)):
 
 <section class="rolling-logos-block <?php echo esc_attr($bg_class); ?>" id="<?php echo esc_attr($id); ?>">
     <div class="container">
-        <?php if ($section_title || $section_subtitle): ?>
-        <div class="logos-header text-center" data-aos="fade-up">
-            <?php if ($section_title): ?>
-                <h3 class="logos-title"><?php echo esc_html($section_title); ?></h3>
+        <div class="logos-wrapper <?php echo ($section_title || $section_subtitle) ? 'has-header' : ''; ?>">
+            <?php if ($section_title || $section_subtitle): ?>
+            <div class="logos-header" data-aos="fade-up">
+                <?php if ($section_title): ?>
+                    <h3 class="logos-title"><?php echo esc_html($section_title); ?></h3>
+                <?php endif; ?>
+
+                <?php if ($section_subtitle): ?>
+                    <p class="logos-subtitle"><?php echo esc_html($section_subtitle); ?></p>
+                <?php endif; ?>
+            </div>
             <?php endif; ?>
 
-            <?php if ($section_subtitle): ?>
-                <p class="logos-subtitle"><?php echo esc_html($section_subtitle); ?></p>
-            <?php endif; ?>
-        </div>
-        <?php endif; ?>
-
-        <div class="logos-container" data-aos="fade-in" id="logos-container-<?php echo esc_attr($id); ?>">
-            <div class="logo-track <?php echo esc_attr($speed_class); ?>" id="logo-track-<?php echo esc_attr($id); ?>">
+            <div class="logos-container" data-aos="fade-in" id="logos-container-<?php echo esc_attr($id); ?>">
+                <div class="logo-track <?php echo esc_attr($speed_class); ?>" id="logo-track-<?php echo esc_attr($id); ?>">
                     <?php if (!empty($integration_posts)): ?>
                         <?php foreach ($integration_posts as $post_id):
                             $logo = get_field('logo', $post_id);
@@ -185,6 +186,7 @@ if (!empty($integration_posts) || !empty($display_client_logos)):
                     <?php endif; ?>
             </div>
         </div>
+        </div>
     </div>
 </section>
 
@@ -199,6 +201,29 @@ endif;
     position: relative;
 }
 
+.logos-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.logos-wrapper.has-header {
+    align-items: center;
+}
+
+.logos-header {
+    text-align: center;
+}
+
+.logos-header .logos-title {
+    margin-bottom: 10px;
+}
+
+.logos-header .logos-subtitle {
+    margin: 0;
+    opacity: 0.8;
+}
+
 .logos-container {
     width: 100%;
     height: 80px;
@@ -206,6 +231,41 @@ endif;
     overflow: hidden;
     mask: linear-gradient(90deg, transparent, black 2%, black 98%, transparent);
     -webkit-mask: linear-gradient(90deg, transparent, black 2%, black 98%, transparent);
+}
+
+/* Desktop layout: side by side with separator */
+@media (min-width: 768px) {
+    .logos-wrapper.has-header {
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .logos-header {
+        flex-shrink: 0;
+        min-width: 250px;
+        max-width: 350px;
+        text-align: left;
+        padding-right: 40px;
+        position: relative;
+    }
+
+    /* Vertical separator line */
+    .logos-header::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 60px;
+        background: black;
+    }
+
+    .logos-container {
+        flex: 1;
+        min-width: 0;
+    }
 }
 
 .logo-track {
